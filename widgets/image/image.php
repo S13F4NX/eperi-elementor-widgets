@@ -21,6 +21,10 @@ class Eperi_Image_Widget extends \Elementor\Widget_Base {
 	// 	return [ 'hello', 'world' ];
 	// }
 
+	public function get_style_depends() {
+		return [ 'image' ];
+	}
+
 
 	protected function register_controls() {
 

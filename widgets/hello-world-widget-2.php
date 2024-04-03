@@ -21,6 +21,8 @@ class Elementor_Hello_World_Widget_2 extends \Elementor\Widget_Base {
 		return [ 'hello', 'world' ];
 	}
 
+
+
 	protected function register_controls() {
 
 		// Content Tab Start

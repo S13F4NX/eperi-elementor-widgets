@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: Eperi Elementor Addon
  * Description: Add custom Eperi widgets to Elementor.
@@ -8,38 +9,39 @@
  * Text Domain: elementor-addon
  */
 
-function register_eperi_widget( $widgets_manager ) {
+function register_eperi_widget($widgets_manager)
+{
 
-	require_once( __DIR__ . '/widgets/image/image.php' );
-	// require_once( __DIR__ . '/widgets/hello-world-widget-2.php' );
+	require_once(__DIR__ . '/widgets/stages/tertiary-stage/index.php');
+	$widgets_manager->register(new \Eperi_Tertiary_Stage_Widget());
 
-	$widgets_manager->register( new \Eperi_Image_Widget() );
-	// $widgets_manager->register( new \Elementor_Hello_World_Widget_2() );
-
+	require_once(__DIR__ . '/widgets/image/image.php');
+	$widgets_manager->register(new \Eperi_Image_Widget());
 }
-add_action( 'elementor/widgets/register', 'register_eperi_widget' );
+add_action('elementor/widgets/register', 'register_eperi_widget');
 
-function elementor_test_widgets_dependencies() {
+function elementor_test_widgets_dependencies()
+{
 
 	/* Scripts */
 	// wp_register_script( 'widget-script-1', plugins_url( 'assets/js/widget-script-1.js', __FILE__ ) );
 	// wp_register_script( 'widget-script-2', plugins_url( 'assets/js/widget-script-2.js', __FILE__ ), [ 'external-library' ] );
 	// wp_register_script( 'external-library', plugins_url( 'assets/js/libs/external-library.js', __FILE__ ) );
 
-	/* Styles */
-	wp_register_style( 'image', plugins_url( 'widgets/image/image.css', __FILE__ ) );
+	wp_register_style('tertiaryStage', plugins_url('widgets/stages/tertiary-stage/style.css', __FILE__));
+	wp_register_style('image', plugins_url('widgets/image/image.css', __FILE__));
 	// wp_register_style( 'widget-style-2', plugins_url( 'assets/css/widget-style-2.css', __FILE__ ), [ 'external-framework' ] );
-	// wp_register_style( 'external-framework', plugins_url( 'assets/css/libs/external-framework.css', __FILE__ ) );
-
+	wp_register_style('external-framework', plugins_url('assets/css/libs/external-framework.css', __FILE__));
 }
-add_action( 'wp_enqueue_scripts', 'elementor_test_widgets_dependencies' );
+add_action('wp_enqueue_scripts', 'elementor_test_widgets_dependencies');
 
-function add_elementor_widget_categories( $elements_manager ) {
+function add_elementor_widget_categories($elements_manager)
+{
 
 	$elements_manager->add_category(
 		'eperi',
 		[
-			'title' => esc_html__( 'Eperi', 'textdomain' ),
+			'title' => esc_html__('Eperi', 'textdomain'),
 			'icon' => 'fa fa-plug',
 		]
 	);
@@ -52,5 +54,4 @@ function add_elementor_widget_categories( $elements_manager ) {
 	// );
 
 }
-add_action( 'elementor/elements/categories_registered', 'add_elementor_widget_categories' );
-
+add_action('elementor/elements/categories_registered', 'add_elementor_widget_categories');

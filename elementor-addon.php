@@ -17,6 +17,9 @@ function register_eperi_widget($widgets_manager)
 
 	require_once(__DIR__ . '/widgets/image/image.php');
 	$widgets_manager->register(new \Eperi_Image_Widget());
+
+	require_once(__DIR__ . '/widgets/cards/nav-card-single/index.php');
+	$widgets_manager->register(new \Eperi_Nav_Card_Single_Widget());
 }
 add_action('elementor/widgets/register', 'register_eperi_widget');
 
@@ -30,7 +33,8 @@ function elementor_test_widgets_dependencies()
 
 	wp_register_style('tertiaryStage', plugins_url('widgets/stages/tertiary-stage/style.css', __FILE__));
 	wp_register_style('image', plugins_url('widgets/image/image.css', __FILE__));
-	// wp_register_style( 'widget-style-2', plugins_url( 'assets/css/widget-style-2.css', __FILE__ ), [ 'external-framework' ] );
+	wp_register_style('navCardSingle', plugins_url('widgets/cards/nav-card-single/style.css', __FILE__));
+
 	wp_register_style('external-framework', plugins_url('assets/css/libs/external-framework.css', __FILE__));
 }
 add_action('wp_enqueue_scripts', 'elementor_test_widgets_dependencies');

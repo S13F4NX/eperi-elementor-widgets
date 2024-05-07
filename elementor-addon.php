@@ -42,6 +42,9 @@ function register_eperi_widget($widgets_manager)
 
 	require_once(__DIR__ . '/widgets/teasers/social-media-teaser/index.php');
 	$widgets_manager->register(new \Eperi_Social_Media_Teaser_Widget());
+
+	require_once(__DIR__ . '/widgets/cards/testimonial/index.php');
+	$widgets_manager->register(new \Eperi_Testimonial_Card_Widget());
 }
 add_action('elementor/widgets/register', 'register_eperi_widget');
 
@@ -63,6 +66,7 @@ function elementor_test_widgets_dependencies()
 	wp_register_style('primaryButton', plugins_url('widgets/buttons/primary-button/style.css', __FILE__));
 	wp_register_style('secondaryButton', plugins_url('widgets/buttons/secondary-button/style.css', __FILE__));
 	wp_register_style('socialMediaTeaser', plugins_url('widgets/teasers/social-media-teaser/style.css', __FILE__));
+	wp_register_style('testimonialCard', plugins_url('widgets/cards/testimonial/style.css', __FILE__));
 
 	wp_register_style('external-framework', plugins_url('assets/css/libs/external-framework.css', __FILE__));
 }

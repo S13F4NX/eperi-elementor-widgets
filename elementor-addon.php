@@ -26,6 +26,9 @@ function register_eperi_widget($widgets_manager)
 
 	require_once(__DIR__ . '/widgets/cards/nav-card-double/index.php');
 	$widgets_manager->register(new \Eperi_Nav_Card_Double_Widget());
+
+	require_once(__DIR__ . '/widgets/info-box-content/index.php');
+	$widgets_manager->register(new \Eperi_Info_Box_Content_Widget());
 }
 add_action('elementor/widgets/register', 'register_eperi_widget');
 
@@ -42,6 +45,7 @@ function elementor_test_widgets_dependencies()
 	wp_register_style('logoWall', plugins_url('widgets/logo-wall/style.css', __FILE__));
 	wp_register_style('navCardSingle', plugins_url('widgets/cards/nav-card-single/style.css', __FILE__));
 	wp_register_style('navCardDouble', plugins_url('widgets/cards/nav-card-double/style.css', __FILE__));
+	wp_register_style('infoBoxContent', plugins_url('widgets/info-box-content/style.css', __FILE__));
 
 	wp_register_style('external-framework', plugins_url('assets/css/libs/external-framework.css', __FILE__));
 }

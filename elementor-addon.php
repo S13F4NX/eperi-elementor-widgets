@@ -34,11 +34,11 @@ function register_eperi_widget($widgets_manager)
 	require_once(__DIR__ . '/widgets/cards/nav-card/index.php');
 	$widgets_manager->register(new \Eperi_Nav_Card_Widget());
 
-	require_once(__DIR__ . '/widgets/cards/nav-card-single/index.php');
-	$widgets_manager->register(new \Eperi_Nav_Card_Single_Widget());
+	require_once(__DIR__ . '/widgets/cards/content-card-horizontal/index.php');
+	$widgets_manager->register(new \Eperi_Content_Card_Horizontal_Widget());
 
-	require_once(__DIR__ . '/widgets/cards/nav-card-double/index.php');
-	$widgets_manager->register(new \Eperi_Nav_Card_Double_Widget());
+	require_once(__DIR__ . '/widgets/cards/content-card-vertical/index.php');
+	$widgets_manager->register(new \Eperi_Content_Card_Vertical_Widget());
 
 	require_once(__DIR__ . '/widgets/info-box-content/index.php');
 	$widgets_manager->register(new \Eperi_Info_Box_Content_Widget());
@@ -76,8 +76,8 @@ function elementor_test_widgets_dependencies()
 
 	// Cards & Teasers
 	wp_register_style('navCard', plugins_url('widgets/cards/nav-card/style.css', __FILE__));
-	wp_register_style('navCardSingle', plugins_url('widgets/cards/nav-card-single/style.css', __FILE__));
-	wp_register_style('navCardDouble', plugins_url('widgets/cards/nav-card-double/style.css', __FILE__));
+	wp_register_style('contentCardHorizontal', plugins_url('widgets/cards/content-card-horizontal/style.css', __FILE__));
+	wp_register_style('contentCardVertical', plugins_url('widgets/cards/content-card-vertical/style.css', __FILE__));
 
 	wp_register_style('tertiaryStage', plugins_url('widgets/stages/tertiary-stage/style.css', __FILE__));
 	wp_register_style('image', plugins_url('widgets/image/image.css', __FILE__));

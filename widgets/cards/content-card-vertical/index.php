@@ -1,15 +1,15 @@
 <?php
-class Eperi_Nav_Card_Single_Widget extends \Elementor\Widget_Base
+class Eperi_Content_Card_Vertical_Widget extends \Elementor\Widget_Base
 {
 
     public function get_name()
     {
-        return 'navCardSingle';
+        return 'contentCardVertical';
     }
 
     public function get_title()
     {
-        return esc_html__('Nav Card Single', 'elementor-addon');
+        return esc_html__('Content card vertical', 'elementor-addon');
     }
 
     public function get_icon()
@@ -28,7 +28,7 @@ class Eperi_Nav_Card_Single_Widget extends \Elementor\Widget_Base
 
     public function get_style_depends()
     {
-        return ['navCardSingle'];
+        return ['contentCardVertical'];
     }
 
 
@@ -98,7 +98,9 @@ class Eperi_Nav_Card_Single_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <div class="navCardSingle">
+        <div style="background-color:red; color:white; display:inline; padding:0px 5px">Content Card Vertical</div>
+
+        <div class="contentCardVertical">
             <div><img src="<?php echo esc_url($settings['image']['url']); ?>" alt=""></div>
             <div>
                 <h2><?php echo $settings['title']; ?></h2>

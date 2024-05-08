@@ -80,7 +80,10 @@ class Eperi_Nav_Card_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
+        <div style="background-color:red; color:white; display:inline; padding:0px 5px">Nav Card</div>
+
         <div class="navCard">
+
             <h2><?php echo $settings['title']; ?></h2>
             <?php if (!empty($settings['link']['url'])) {
                 $this->add_link_attributes('link', $settings['link']);

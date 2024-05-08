@@ -40,8 +40,8 @@ function register_eperi_widget($widgets_manager)
 	require_once(__DIR__ . '/widgets/cards/content-card-vertical/index.php');
 	$widgets_manager->register(new \Eperi_Content_Card_Vertical_Widget());
 
-	require_once(__DIR__ . '/widgets/info-box-content/index.php');
-	$widgets_manager->register(new \Eperi_Info_Box_Content_Widget());
+	require_once(__DIR__ . '/widgets/cards/text-cta-card/index.php');
+	$widgets_manager->register(new \Eperi_Text_Cta_Card_Widget());
 
 	require_once(__DIR__ . '/widgets/teasers/blog-teaser/index.php');
 	$widgets_manager->register(new \Eperi_Blog_Teaser_Widget());
@@ -50,7 +50,11 @@ function register_eperi_widget($widgets_manager)
 	$widgets_manager->register(new \Eperi_News_Teaser_Widget());
 
 
+
 	// Content elements
+	require_once(__DIR__ . '/widgets/info-box-content/index.php');
+	$widgets_manager->register(new \Eperi_Info_Box_Content_Widget());
+
 	require_once(__DIR__ . '/widgets/info-box-newsletter/index.php');
 	$widgets_manager->register(new \Eperi_Info_Box_Newsletter_Widget());
 

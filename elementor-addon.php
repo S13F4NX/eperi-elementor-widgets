@@ -12,6 +12,12 @@
 function register_eperi_widget($widgets_manager)
 {
 
+	require_once(__DIR__ . '/widgets/stages/primary-stage/index.php');
+	$widgets_manager->register(new \Eperi_Primary_Stage_Widget());
+
+	require_once(__DIR__ . '/widgets/stages/secondary-stage/index.php');
+	$widgets_manager->register(new \Eperi_Secondary_Stage_Widget());
+
 	require_once(__DIR__ . '/widgets/stages/tertiary-stage/index.php');
 	$widgets_manager->register(new \Eperi_Tertiary_Stage_Widget());
 

@@ -64,7 +64,7 @@ class Eperi_Text_Cta_Card_Widget extends \Elementor\Widget_Base
         );
 
         $this->add_control(
-            'link',
+            'cta',
             [
                 'label' => esc_html__('Link', 'textdomain'),
                 'type' => \Elementor\Controls_Manager::URL,
@@ -80,15 +80,22 @@ class Eperi_Text_Cta_Card_Widget extends \Elementor\Widget_Base
         );
 
         $this->add_control(
-            'image',
+            'link',
             [
-                'label' => esc_html__('Choose Image', 'textdomain'),
-                'type' => \Elementor\Controls_Manager::MEDIA,
+                'label' => esc_html__('Link', 'textdomain'),
+                'type' => \Elementor\Controls_Manager::URL,
+                'options' => ['url', 'is_external', 'nofollow'],
                 'default' => [
-                    'url' => \Elementor\Utils::get_placeholder_image_src(),
+                    'url' => '',
+                    'is_external' => true,
+                    'nofollow' => true,
+                    // 'custom_attributes' => '',
                 ],
+                'label_block' => true,
             ]
         );
+
+
 
         $this->end_controls_section();
     }
@@ -101,19 +108,24 @@ class Eperi_Text_Cta_Card_Widget extends \Elementor\Widget_Base
         <div style="background-color:red; color:white; display:inline; padding:0px 5px">Text CTA Card</div>
 
         <div class="textCtaCard">
-            <div><img src="<?php echo esc_url($settings['image']['url']); ?>" alt=""></div>
-            <div>
-                <h2><?php echo $settings['title']; ?></h2>
-                <div><?php echo $settings['text']; ?></div>
+            <h2><?php echo $settings['title']; ?></h2>
+            <div><?php echo $settings['text']; ?></div>
 
-                <?php if (!empty($settings['link']['url'])) {
-                    $this->add_link_attributes('link', $settings['link']);
-                }
-                ?>
-                <a <?php echo $this->get_render_attribute_string('link'); ?>>
-                    Add link here
-                </a>
-            </div>
+            <?php if (!empty($settings['cta']['url'])) {
+                $this->add_link_attributes('link', $settings['cta']);
+            }
+            ?>
+            <a <?php echo $this->get_render_attribute_string('cta'); ?>>
+                Add cta here
+            </a>
+
+            <?php if (!empty($settings['link']['url'])) {
+                $this->add_link_attributes('link', $settings['link']);
+            }
+            ?>
+            <a <?php echo $this->get_render_attribute_string('link'); ?>>
+                Add link here
+            </a>
         </div>
 
 <?php

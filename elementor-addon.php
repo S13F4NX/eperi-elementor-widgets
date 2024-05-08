@@ -58,11 +58,15 @@ function register_eperi_widget($widgets_manager)
 	require_once(__DIR__ . '/widgets/cards/job-offer-card/index.php');
 	$widgets_manager->register(new \Eperi_Job_Offer_Card_Widget());
 
+	require_once(__DIR__ . '/widgets/cards/benefit-icon-card/index.php');
+	$widgets_manager->register(new \Eperi_Benefit_Icon_Card_Widget());
+
 	require_once(__DIR__ . '/widgets/teasers/blog-teaser/index.php');
 	$widgets_manager->register(new \Eperi_Blog_Teaser_Widget());
 
 	require_once(__DIR__ . '/widgets/teasers/news-teaser/index.php');
 	$widgets_manager->register(new \Eperi_News_Teaser_Widget());
+
 
 
 
@@ -110,6 +114,9 @@ function elementor_test_widgets_dependencies()
 	wp_register_style('navCard', plugins_url('widgets/cards/nav-card/style.css', __FILE__));
 	wp_register_style('contentCardHorizontal', plugins_url('widgets/cards/content-card-horizontal/style.css', __FILE__));
 	wp_register_style('contentCardVertical', plugins_url('widgets/cards/content-card-vertical/style.css', __FILE__));
+	wp_register_style('textCtaCard', plugins_url('widgets/cards/text-cta-card/style.css', __FILE__));
+	wp_register_style('jobOfferCard', plugins_url('widgets/cards/job-offer-card/style.css', __FILE__));
+	wp_register_style('benefitIconCard', plugins_url('widgets/cards/benefit-icon-card/style.css', __FILE__));
 
 	wp_register_style('tertiaryStage', plugins_url('widgets/stages/tertiary-stage/style.css', __FILE__));
 	wp_register_style('image', plugins_url('widgets/image/content/image.css', __FILE__));

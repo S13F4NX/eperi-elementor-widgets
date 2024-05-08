@@ -94,6 +94,10 @@ function register_eperi_widget($widgets_manager)
 
 	require_once(__DIR__ . '/widgets/cards/testimonial/index.php');
 	$widgets_manager->register(new \Eperi_Testimonial_Card_Widget());
+
+	// Dynamic Content
+	require_once(__DIR__ . '/widgets/dynamicContent/latestNews/index.php');
+	$widgets_manager->register(new \Eperi_Lastest_News_Widget());
 }
 add_action('elementor/widgets/register', 'register_eperi_widget');
 
@@ -128,6 +132,9 @@ function elementor_test_widgets_dependencies()
 	wp_register_style('secondaryButton', plugins_url('widgets/buttons/secondary-button/style.css', __FILE__));
 	wp_register_style('socialMediaTeaser', plugins_url('widgets/teasers/social-media-teaser/style.css', __FILE__));
 	wp_register_style('testimonialCard', plugins_url('widgets/cards/testimonial/style.css', __FILE__));
+
+	// Dynamic Content
+	wp_register_style('lastestNews', plugins_url('widgets/dynamicContent/latestNews/style.css', __FILE__));
 
 	wp_register_style('external-framework', plugins_url('assets/css/libs/external-framework.css', __FILE__));
 }
@@ -171,6 +178,14 @@ function add_elementor_widget_categories($elements_manager)
 		'eperiCards',
 		[
 			'title' => esc_html__('Eperi Cards & Teasers', 'textdomain'),
+			'icon' => 'fa fa-plug',
+		]
+	);
+
+	$elements_manager->add_category(
+		'eperiDynamic',
+		[
+			'title' => esc_html__('Eperi Dynamic Content', 'textdomain'),
 			'icon' => 'fa fa-plug',
 		]
 	);

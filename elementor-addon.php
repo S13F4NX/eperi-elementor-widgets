@@ -30,6 +30,19 @@ function register_eperi_widget($widgets_manager)
 	require_once(__DIR__ . '/widgets/logo-wall/index.php');
 	$widgets_manager->register(new \Eperi_Logo_Wall_Widget());
 
+	// Headlines
+	require_once(__DIR__ . '/widgets/headlines/h1/index.php');
+	$widgets_manager->register(new \Eperi_H1_Widget());
+
+	require_once(__DIR__ . '/widgets/headlines/h2/index.php');
+	$widgets_manager->register(new \Eperi_H2_Widget());
+
+	require_once(__DIR__ . '/widgets/headlines/h3/index.php');
+	$widgets_manager->register(new \Eperi_H3_Widget());
+
+	require_once(__DIR__ . '/widgets/headlines/h4/index.php');
+	$widgets_manager->register(new \Eperi_H4_Widget());
+
 	// Cards & Teasers
 	require_once(__DIR__ . '/widgets/cards/nav-card/index.php');
 	$widgets_manager->register(new \Eperi_Nav_Card_Widget());
@@ -122,6 +135,14 @@ function add_elementor_widget_categories($elements_manager)
 		'eperiStages',
 		[
 			'title' => esc_html__('Eperi Stages', 'textdomain'),
+			'icon' => 'fa fa-plug',
+		]
+	);
+
+	$elements_manager->add_category(
+		'eperiHeadlines',
+		[
+			'title' => esc_html__('Eperi Headlines', 'textdomain'),
 			'icon' => 'fa fa-plug',
 		]
 	);

@@ -43,6 +43,9 @@ function register_eperi_widget($widgets_manager)
 	require_once(__DIR__ . '/widgets/cards/text-cta-card/index.php');
 	$widgets_manager->register(new \Eperi_Text_Cta_Card_Widget());
 
+	require_once(__DIR__ . '/widgets/cards/job-offer-card/index.php');
+	$widgets_manager->register(new \Eperi_Job_Offer_Card_Widget());
+
 	require_once(__DIR__ . '/widgets/teasers/blog-teaser/index.php');
 	$widgets_manager->register(new \Eperi_Blog_Teaser_Widget());
 

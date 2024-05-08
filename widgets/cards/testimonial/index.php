@@ -102,6 +102,7 @@ class Eperi_Testimonial_Card_Widget extends \Elementor\Widget_Base
     {
         $settings = $this->get_settings_for_display();
 ?>
+        <div style="background-color:red; color:white; display:inline; padding:0px 5px">Testimonial Card</div>
 
         <div class="testimonialCard" style="max-width:300px">
             <div><img src="<?php echo esc_url($settings['image']['url']); ?>" alt="" style="border-radius:100%; height:100px; width:100px"></div>

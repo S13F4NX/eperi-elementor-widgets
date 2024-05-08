@@ -19,7 +19,7 @@ class Eperi_Primary_Stage_Widget extends \Elementor\Widget_Base
 
     public function get_categories()
     {
-        return ['eperi'];
+        return ['eperiStages'];
     }
 
     // public function get_keywords() {

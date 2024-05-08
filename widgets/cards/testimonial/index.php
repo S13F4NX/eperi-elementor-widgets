@@ -19,7 +19,7 @@ class Eperi_Testimonial_Card_Widget extends \Elementor\Widget_Base
 
     public function get_categories()
     {
-        return ['eperi'];
+        return ['eperiCards'];
     }
 
     // public function get_keywords() {

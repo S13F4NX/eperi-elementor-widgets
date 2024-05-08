@@ -19,7 +19,7 @@ class Eperi_Secondary_Button_Widget extends \Elementor\Widget_Base
 
     public function get_categories()
     {
-        return ['eperi'];
+        return ['eperiContent'];
     }
 
     // public function get_keywords() {

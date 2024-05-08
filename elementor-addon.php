@@ -11,6 +11,9 @@
 
 function register_eperi_widget($widgets_manager)
 {
+	// Boilerplates
+	require_once(__DIR__ . '/widgets/boilerplate/index.php');
+	$widgets_manager->register(new \Eperi_Boilerplate_Widget());
 
 	require_once(__DIR__ . '/widgets/stages/primary-stage/index.php');
 	$widgets_manager->register(new \Eperi_Primary_Stage_Widget());
@@ -26,6 +29,11 @@ function register_eperi_widget($widgets_manager)
 
 	require_once(__DIR__ . '/widgets/logo-wall/index.php');
 	$widgets_manager->register(new \Eperi_Logo_Wall_Widget());
+
+	// Cards & Teasers
+
+	require_once(__DIR__ . '/widgets/cards/nav-card/index.php');
+	$widgets_manager->register(new \Eperi_Nav_Card_Widget());
 
 	require_once(__DIR__ . '/widgets/cards/nav-card-single/index.php');
 	$widgets_manager->register(new \Eperi_Nav_Card_Single_Widget());
@@ -62,6 +70,9 @@ function elementor_test_widgets_dependencies()
 	// wp_register_script( 'widget-script-2', plugins_url( 'assets/js/widget-script-2.js', __FILE__ ), [ 'external-library' ] );
 	// wp_register_script( 'external-library', plugins_url( 'assets/js/libs/external-library.js', __FILE__ ) );
 
+	/* Styles */
+	wp_register_style('boilerplate', plugins_url('widgets/boilerplate/style.css', __FILE__));
+
 	wp_register_style('tertiaryStage', plugins_url('widgets/stages/tertiary-stage/style.css', __FILE__));
 	wp_register_style('image', plugins_url('widgets/image/image.css', __FILE__));
 	wp_register_style('logoWall', plugins_url('widgets/logo-wall/style.css', __FILE__));
@@ -80,6 +91,13 @@ add_action('wp_enqueue_scripts', 'elementor_test_widgets_dependencies');
 
 function add_elementor_widget_categories($elements_manager)
 {
+	$elements_manager->add_category(
+		'eperiBoilerplates',
+		[
+			'title' => esc_html__('Eperi Boilerplates', 'textdomain'),
+			'icon' => 'fa fa-plug',
+		]
+	);
 
 	$elements_manager->add_category(
 		'eperiStages',
@@ -104,13 +122,5 @@ function add_elementor_widget_categories($elements_manager)
 			'icon' => 'fa fa-plug',
 		]
 	);
-	// $elements_manager->add_category(
-	// 	'second-category',
-	// 	[
-	// 		'title' => esc_html__( 'Second Category', 'textdomain' ),
-	// 		'icon' => 'fa fa-plug',
-	// 	]
-	// );
-
 }
 add_action('elementor/elements/categories_registered', 'add_elementor_widget_categories');

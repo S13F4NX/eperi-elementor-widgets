@@ -1,0 +1,13 @@
+.navCard {
+    /* Rectangle 15 */
+
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    /* Gradients/Bright Teal */
+    background: linear-gradient(206.29deg, #52ffbb 15.61%, #00b4b4 86.39%);
+    border-radius: 16px;
+}

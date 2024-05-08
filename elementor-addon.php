@@ -96,8 +96,11 @@ function register_eperi_widget($widgets_manager)
 	$widgets_manager->register(new \Eperi_Testimonial_Card_Widget());
 
 	// Dynamic Content
-	require_once(__DIR__ . '/widgets/dynamicContent/latestNews/index.php');
+	require_once(__DIR__ . '/widgets/dynamic-content/latest-news/index.php');
 	$widgets_manager->register(new \Eperi_Lastest_News_Widget());
+
+	require_once(__DIR__ . '/widgets/dynamic-content/hubspot-form/index.php');
+	$widgets_manager->register(new \Eperi_HubSpot_Form_Widget());
 }
 add_action('elementor/widgets/register', 'register_eperi_widget');
 
@@ -134,7 +137,8 @@ function elementor_test_widgets_dependencies()
 	wp_register_style('testimonialCard', plugins_url('widgets/cards/testimonial/style.css', __FILE__));
 
 	// Dynamic Content
-	wp_register_style('lastestNews', plugins_url('widgets/dynamicContent/latestNews/style.css', __FILE__));
+	wp_register_style('lastestNews', plugins_url('widgets/dynamic-content/latest-news/style.css', __FILE__));
+	wp_register_style('hubSpotForm', plugins_url('widgets/dynamic-content/hubspot-form/style.css', __FILE__));
 
 	wp_register_style('external-framework', plugins_url('assets/css/libs/external-framework.css', __FILE__));
 }

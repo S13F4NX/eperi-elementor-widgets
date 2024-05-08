@@ -94,6 +94,8 @@ class Eperi_Social_Media_Teaser_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
+        <div style="background-color:red; color:white; display:inline; padding:0px 5px">Social Media Teaser</div>
+
         <div class="socialMediaTeaser" style="max-width: 200px;">
             <div><img src="<?php echo esc_url($settings['image']['url']); ?>" alt=""></div>
             <div>

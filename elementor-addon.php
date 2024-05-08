@@ -43,7 +43,14 @@ function register_eperi_widget($widgets_manager)
 	require_once(__DIR__ . '/widgets/info-box-content/index.php');
 	$widgets_manager->register(new \Eperi_Info_Box_Content_Widget());
 
+	require_once(__DIR__ . '/widgets/teasers/blog-teaser/index.php');
+	$widgets_manager->register(new \Eperi_Blog_Teaser_Widget());
 
+	require_once(__DIR__ . '/widgets/teasers/news-teaser/index.php');
+	$widgets_manager->register(new \Eperi_News_Teaser_Widget());
+
+
+	// Content elements
 	require_once(__DIR__ . '/widgets/info-box-newsletter/index.php');
 	$widgets_manager->register(new \Eperi_Info_Box_Newsletter_Widget());
 

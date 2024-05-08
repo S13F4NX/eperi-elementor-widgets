@@ -1,15 +1,15 @@
 <?php
-class Eperi_Boilerplate_Widget extends \Elementor\Widget_Base
+class Eperi_News_Teaser_Widget extends \Elementor\Widget_Base
 {
 
     public function get_name()
     {
-        return 'boilerplate';
+        return 'newsTeaser';
     }
 
     public function get_title()
     {
-        return esc_html__('Boilerplate', 'elementor-addon');
+        return esc_html__('News teaser', 'elementor-addon');
     }
 
     public function get_icon()
@@ -19,7 +19,7 @@ class Eperi_Boilerplate_Widget extends \Elementor\Widget_Base
 
     public function get_categories()
     {
-        return ['eperiBoilerplates'];
+        return ['eperiCards'];
     }
 
     // public function get_keywords() {
@@ -28,7 +28,7 @@ class Eperi_Boilerplate_Widget extends \Elementor\Widget_Base
 
     public function get_style_depends()
     {
-        return ['boilerplate'];
+        return ['newsTeaser'];
     }
 
 
@@ -98,9 +98,9 @@ class Eperi_Boilerplate_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <div style="background-color:red; color:white; display:inline; padding:0px 5px">Boilerplate</div>
+        <div style="background-color:red; color:white; display:inline; padding:0px 5px">NewsTeaser</div>
 
-        <div class="boilerplate">
+        <div class="newsTeaser">
             <div><img src="<?php echo esc_url($settings['image']['url']); ?>" alt=""></div>
             <div>
                 <h2><?php echo $settings['title']; ?></h2>

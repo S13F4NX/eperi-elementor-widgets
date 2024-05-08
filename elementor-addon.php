@@ -24,8 +24,7 @@ function register_eperi_widget($widgets_manager)
 	require_once(__DIR__ . '/widgets/stages/tertiary-stage/index.php');
 	$widgets_manager->register(new \Eperi_Tertiary_Stage_Widget());
 
-	require_once(__DIR__ . '/widgets/image/index.php');
-	$widgets_manager->register(new \Eperi_Image_Widget());
+
 
 	require_once(__DIR__ . '/widgets/logo-wall/index.php');
 	$widgets_manager->register(new \Eperi_Logo_Wall_Widget());
@@ -68,6 +67,12 @@ function register_eperi_widget($widgets_manager)
 
 
 	// Content elements
+	require_once(__DIR__ . '/widgets/content/rich-text/index.php');
+	$widgets_manager->register(new \Eperi_Rich_Text_Widget());
+
+	require_once(__DIR__ . '/widgets/content/image/index.php');
+	$widgets_manager->register(new \Eperi_Image_Widget());
+
 	require_once(__DIR__ . '/widgets/info-box-content/index.php');
 	$widgets_manager->register(new \Eperi_Info_Box_Content_Widget());
 
@@ -107,7 +112,7 @@ function elementor_test_widgets_dependencies()
 	wp_register_style('contentCardVertical', plugins_url('widgets/cards/content-card-vertical/style.css', __FILE__));
 
 	wp_register_style('tertiaryStage', plugins_url('widgets/stages/tertiary-stage/style.css', __FILE__));
-	wp_register_style('image', plugins_url('widgets/image/image.css', __FILE__));
+	wp_register_style('image', plugins_url('widgets/image/content/image.css', __FILE__));
 	wp_register_style('logoWall', plugins_url('widgets/logo-wall/style.css', __FILE__));
 
 	wp_register_style('infoBoxContent', plugins_url('widgets/info-box-content/style.css', __FILE__));
@@ -150,7 +155,7 @@ function add_elementor_widget_categories($elements_manager)
 	$elements_manager->add_category(
 		'eperiContent',
 		[
-			'title' => esc_html__('Eperi Contnet', 'textdomain'),
+			'title' => esc_html__('Eperi Content', 'textdomain'),
 			'icon' => 'fa fa-plug',
 		]
 	);

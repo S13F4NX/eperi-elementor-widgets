@@ -62,6 +62,10 @@ class Eperi_Image_Widget extends \Elementor\Widget_Base
 		$settings = $this->get_settings_for_display();
 
 		// Get image url
+?>
+		<div style="background-color:red; color:white; display:inline; padding:0px 5px">Image</div>
+
+<?php
 		echo '<img src="' . esc_url($settings['image']['url']) . '" alt="">';
 
 		// // Get image by id

@@ -63,12 +63,9 @@ class Eperi_Image_Widget extends \Elementor\Widget_Base
 
 		// Get image url
 ?>
-		<div style="background-color:red; color:white; display:inline; padding:0px 5px">Image</div>
+		<!-- <div style="background-color:red; color:white; display:inline; padding:0px 5px">Image</div> -->
+		<img src="<?php echo esc_url($settings['image']['url']); ?>" alt="" class="default_image">
 
 <?php
-		echo '<img src="' . esc_url($settings['image']['url']) . '" alt="">';
-
-		// // Get image by id
-		// echo wp_get_attachment_image( $settings['image']['id'], 'thumbnail' );
 	}
 }

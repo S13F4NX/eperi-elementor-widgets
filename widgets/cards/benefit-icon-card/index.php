@@ -93,15 +93,13 @@ class Eperi_Benefit_Icon_Card_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <div style="background-color:red; color:white; display:inline; padding:0px 5px">Benefit Icon</div>
-
-        <div class="benefitIconCard" style="max-width: 200px;">
+        <div class="">
             <div>
-                <div class="my-icon-wrapper">
-                    <?php \Elementor\Icons_Manager::render_icon($settings['icon'], ['aria-hidden' => 'true']); ?>
+                <div class="my-icon-wrapper" style="width:56px; height:56px;">
+                    <?php \Elementor\Icons_Manager::render_icon($settings['icon'], ['aria-hidden' => 'true', 'class' => 'benefit_icon_svg']); ?>
                 </div>
-                <div><?php echo $settings['title']; ?></div>
-                <div><?php echo $settings['text']; ?></div>
+                <div class="title_size_4 top_margin_24"><?php echo $settings['title']; ?></div>
+                <div class="top_margin_24"><?php echo $settings['text']; ?></div>
             </div>
         </div>
 

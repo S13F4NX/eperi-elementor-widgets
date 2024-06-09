@@ -1,0 +1,43 @@
+.secondaryStage {
+    min-height: 600px;
+}
+
+.secondaryStage .stageTeaser {
+    position: absolute;
+    width: 673px;
+    height: 484px;
+    left: 0px;
+    bottom: 0px;
+
+    padding: 55px;
+
+    /* Gradients/Gray Teal */
+    background: linear-gradient(206.29deg, #1c1c1c 15.61%, #1d394b 86.39%);
+    border-radius: 24px;
+
+    color: #52ffbb;
+
+    z-index: 10;
+}
+
+.secondaryStage .stageTeaser .breadcrumb {
+    color: #fff;
+}
+
+.secondaryStage .stageTeaser h1 {
+    color: #52ffbb;
+}
+
+.secondaryStage .stageImage {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.secondaryStage .stageImage img {
+    width: 900px;
+    max-width: 1142px;
+    max-height: 520px;
+    object-fit: cover;
+
+    border-radius: 0 0 24px 24px;
+}

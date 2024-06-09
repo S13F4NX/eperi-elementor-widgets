@@ -62,20 +62,21 @@ class Eperi_Secondary_Stage_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <div class="tertiaryStage">
-            <!-- <div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div> -->
+        <div class="secondaryStage ">
 
+            <div class="stageTeaser border_radius_24">
+                <div class="breadcrumb subline">Breadcrumb</div>
+                <h1 class="title_size_1 top_margin_8">Arbeiten Sie
+                    womit Sie wollen. Aber Sicher.</h1>
+                <div class="top_margin_56">Demo anfragen</div>
+                <div class="top_margin_16">Kontakt</div>
+            </div>
+
+            <div class="stageImage">
+                <img src="<?php echo esc_url($settings['image']['url']); ?>" alt="">
+            </div>
+
+            <!-- 
             <div style="grid-column: col-start / span 12;">
                 <div class="breadcrumb">Pagecategory – current Page title</div>
                 <div class="title">Headline Tertiary Stage pagetitle</div>
@@ -86,8 +87,8 @@ class Eperi_Secondary_Stage_Widget extends \Elementor\Widget_Base
                 <div>CTAs</div>
             </div>
             <div style="grid-column: col-start 11 / span 2;" class="stageImage">
-                <img src="<?php echo esc_url($settings['image']['url']); ?>" alt="">
-            </div>
+                
+            </div> -->
 
         </div>
 

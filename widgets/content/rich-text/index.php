@@ -66,7 +66,7 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
 ?>
 
         <!-- <div style="background-color:red; color:white; display:inline; padding:0px 5px">Rich Text</div> -->
-        <div class="copy_medium"><?php echo $settings['text']; ?></div>
+        <div class="richText copy_medium"><?php echo $settings['text']; ?></div>
 
 <?php
     }

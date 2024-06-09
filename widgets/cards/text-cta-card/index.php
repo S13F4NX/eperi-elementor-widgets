@@ -105,29 +105,30 @@ class Eperi_Text_Cta_Card_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <div style="background-color:red; color:white; display:inline; padding:0px 5px">Text CTA Card</div>
 
-        <div class="textCtaCard">
-            <h2><?php echo $settings['title']; ?></h2>
-            <div><?php echo $settings['text']; ?></div>
+        <div class="textCtaCard border_radius_24">
+            <h3 class="title_size_4"><?php echo $settings['title']; ?></h3>
+            <div class="copy_medium top_margin_16"><?php echo $settings['text']; ?></div>
 
             <?php if (!empty($settings['cta']['url'])) {
                 $this->add_link_attributes('link', $settings['cta']);
             }
             ?>
-            <a <?php echo $this->get_render_attribute_string('cta'); ?>>
+            <a <?php echo $this->get_render_attribute_string('cta'); ?> class="button button_light_primary top_margin_32">
                 Add cta here
             </a>
 
-            <?php if (!empty($settings['link']['url'])) {
-                $this->add_link_attributes('link', $settings['link']);
-            }
-            ?>
-            <a <?php echo $this->get_render_attribute_string('link'); ?>>
-                Add link here
-            </a>
-        </div>
+            <div class="top_margin_24">
+                <?php if (!empty($settings['link']['url'])) {
+                    $this->add_link_attributes('link', $settings['link']);
+                }
+                ?>
+                <a <?php echo $this->get_render_attribute_string('link'); ?> class="button_light_tertiary">
+                    Add link here
+                </a>
 
+            </div>
+        </div>
 <?php
     }
 }

@@ -103,7 +103,7 @@ class Eperi_Content_Card_Vertical_Widget extends \Elementor\Widget_Base
             <div class="teaserImage"><img src="<?php echo esc_url($settings['image']['url']); ?>" alt=""></div>
             <div class="teaserContent">
                 <h2 class="title_size_4"><?php echo $settings['title']; ?></h2>
-                <div class="copy_medium top_margin_16v"><?php echo $settings['text']; ?></div>
+                <div class="copy_medium top_margin_16"><?php echo $settings['text']; ?></div>
 
                 <?php if (!empty($settings['link']['url'])) {
                     $this->add_link_attributes('link', $settings['link']);

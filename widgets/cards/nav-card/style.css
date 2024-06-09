@@ -1,7 +1,20 @@
 .navCard {
-    /* Rectangle 15 */
+    position: relative;
+
+    width: 320px;
+    height: 192px;
+    padding: 40px 32px;
 
     /* Gradients/Bright Teal */
     background: linear-gradient(206.29deg, #52ffbb 15.61%, #00b4b4 86.39%);
-    border-radius: 16px;
+}
+
+.navCard .navLink {
+    position: absolute;
+    bottom: 32px;
+    right: 40px;
+
+    padding: 10px 12px;
+
+    border: 2px solid #1d394b;
 }

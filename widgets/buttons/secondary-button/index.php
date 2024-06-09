@@ -73,9 +73,7 @@ class Eperi_Secondary_Button_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <div style="background-color:red; color:white; display:inline; padding:0px 5px">Secondary Button</div>
-
-        <div class="secondaryButton">
+        <div class="button button_light_secondary">
             <?php if (!empty($settings['cta']['url'])) {
                 $this->add_link_attributes('cta', $settings['cta']);
             }

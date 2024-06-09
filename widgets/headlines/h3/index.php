@@ -61,8 +61,8 @@ class Eperi_H3_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <div style="background-color:red; color:white; display:inline; padding:0px 5px">H3 Headline</div>
-        <h3><?php echo $settings['headline']; ?></h3>
+        <!-- <div style="background-color:red; color:white; display:inline; padding:0px 5px">H3 Headline</div> -->
+        <h3 class="title_size_3"><?php echo $settings['headline']; ?></h3>
 
 <?php
     }

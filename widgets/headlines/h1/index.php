@@ -61,8 +61,8 @@ class Eperi_H1_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <div style="background-color:red; color:white; display:inline; padding:0px 5px">H1 Headline</div>
-        <h1><?php echo $settings['headline']; ?></h1>
+        <!-- <div style="background-color:red; color:white; display:inline; padding:0px 5px">H1 Headline</div> -->
+        <h1 class="title_size_1"><?php echo $settings['headline']; ?></h1>
 
 <?php
     }

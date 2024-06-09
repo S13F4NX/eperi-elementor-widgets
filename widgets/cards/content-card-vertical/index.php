@@ -98,19 +98,18 @@ class Eperi_Content_Card_Vertical_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <div style="background-color:red; color:white; display:inline; padding:0px 5px">Content Card Vertical</div>
 
-        <div class="contentCardVertical">
-            <div><img src="<?php echo esc_url($settings['image']['url']); ?>" alt=""></div>
-            <div>
-                <h2><?php echo $settings['title']; ?></h2>
-                <div><?php echo $settings['text']; ?></div>
+        <div class="contentCardVertical border_radius_24">
+            <div class="teaserImage"><img src="<?php echo esc_url($settings['image']['url']); ?>" alt=""></div>
+            <div class="teaserContent">
+                <h2 class="title_size_4"><?php echo $settings['title']; ?></h2>
+                <div class="copy_medium top_margin_16v"><?php echo $settings['text']; ?></div>
 
                 <?php if (!empty($settings['link']['url'])) {
                     $this->add_link_attributes('link', $settings['link']);
                 }
                 ?>
-                <a <?php echo $this->get_render_attribute_string('link'); ?>>
+                <a <?php echo $this->get_render_attribute_string('link'); ?> class="button_light_tertiary">
                     Add link here
                 </a>
             </div>

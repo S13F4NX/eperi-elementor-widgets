@@ -3,4 +3,14 @@
     grid-template-columns: 1fr;
 
     gap: 20px;
+
+    background-color: #fff;
+}
+
+.contentCardVertical .teaserImage img {
+    border-radius: 24px 24px 0 0;
+}
+
+.contentCardVertical .teaserContent {
+    padding: 24px 32px;
 }

@@ -73,9 +73,9 @@ class Eperi_Primary_Button_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <div style="background-color:red; color:white; display:inline; padding:0px 5px">Primary Button</div>
+        <!-- <div style="background-color:red; color:white; display:inline; padding:0px 5px">Primary Button</div> -->
 
-        <div class="primaryButton">
+        <div class="button button_light_default">
             <?php if (!empty($settings['cta']['url'])) {
                 $this->add_link_attributes('cta', $settings['cta']);
             }

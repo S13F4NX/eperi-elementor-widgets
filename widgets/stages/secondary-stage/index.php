@@ -44,6 +44,16 @@ class Eperi_Secondary_Stage_Widget extends \Elementor\Widget_Base
         );
 
         $this->add_control(
+            'headline',
+            [
+                'label' => esc_html__('Headline', 'textdomain'),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__('Add your headline here', 'textdomain'),
+                'placeholder' => esc_html__('Type your headline here', 'textdomain'),
+            ]
+        );
+
+        $this->add_control(
             'image',
             [
                 'label' => esc_html__('Choose Image', 'textdomain'),
@@ -66,10 +76,9 @@ class Eperi_Secondary_Stage_Widget extends \Elementor\Widget_Base
 
             <div class="stageTeaser border_radius_24">
                 <div class="breadcrumb subline">Breadcrumb</div>
-                <h1 class="title_size_1 top_margin_8">Arbeiten Sie
-                    womit Sie wollen. Aber Sicher.</h1>
-                <div class="top_margin_56">Demo anfragen</div>
-                <div class="top_margin_16">Kontakt</div>
+                <h1 class="title_size_1 top_margin_8"><?php echo $settings['headline']; ?></h1>
+                <!-- <div class="top_margin_56">Demo anfragen</div>
+                <div class="top_margin_16">Kontakt</div> -->
             </div>
 
             <div class="stageImage">

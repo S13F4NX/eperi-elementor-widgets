@@ -99,7 +99,6 @@ class Eperi_Content_Card_Horizontal_Widget extends \Elementor\Widget_Base
 ?>
 
         <div style="background-color:red; color:white; display:inline; padding:0px 5px">Content Card Horizontal</div>
-
         <div class="contentCardHorizontal">
             <div><img src="<?php echo esc_url($settings['image']['url']); ?>" alt=""></div>
             <div>

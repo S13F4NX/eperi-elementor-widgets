@@ -1,6 +1,9 @@
 .infoBoxContent {
+    padding: 55px 110px !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 906px;
     padding: 30px;
     /* Gradients/Bright Teal */
     background: linear-gradient(206.29deg, #52ffbb 15.61%, #00b4b4 86.39%);
-    border-radius: 24px;
 }

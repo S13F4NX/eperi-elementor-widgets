@@ -1,6 +1,25 @@
-.infoBoxContent {
-    padding: 30px;
+.infoBoxNewsletter {
+    padding: 56px 117px;
     /* Gradients/Bright Teal */
     background: linear-gradient(206.29deg, #52ffbb 15.61%, #00b4b4 86.39%);
     border-radius: 24px;
+}
+
+.infoBoxNewsletter p {
+    margin: 0;
+    padding: 0;
+}
+
+.infoBoxNewsletter input {
+    width: 320px;
+}
+
+.infoBoxNewsletter button {
+    width: 203px;
+}
+
+.infoBoxNewsletter label {
+    display: block;
+    margin-left: 16px;
+    margin-bottom: 4px;
 }

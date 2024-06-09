@@ -73,17 +73,20 @@ class Eperi_Info_Box_Newsletter_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <div class="infoBoxContent" style="display:grid; grid-template-columns: 1fr 1fr;">
-            <div>
-                <h2><?php echo $settings['title']; ?></h2>
-                <div><?php echo $settings['text']; ?></div>
+        <div class="infoBoxNewsletter">
+            <h3 class="title_size_3"><?php echo $settings['title']; ?></h3>
+            <div class="top_margin_32" style="display:grid; grid-template-columns: 1fr 1fr; gap:100px;">
+                <div class="copy_medium"><?php echo $settings['text']; ?></div>
+                <div style="align-self: end;">
+                    <label class="secondary_copy">E-Mailadresse</label>
+
+                    <form style="display:flex; gap:16px">
+                        <input type="email" placeholder="Email" class="text_input">
+                        <button type="submit" class="button button_light_secondary">Subscribe</button>
+                    </form>
+                </div>
             </div>
-            <div>
-                <form>
-                    <input type="email" placeholder="Email">
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
+
         </div>
 
 <?php

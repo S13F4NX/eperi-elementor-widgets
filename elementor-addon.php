@@ -117,6 +117,11 @@ function elementor_test_widgets_dependencies()
 
 	wp_register_style('boilerplate', plugins_url('widgets/boilerplate/style.css', __FILE__));
 
+	// Stages
+	wp_register_style('primaryStage', plugins_url('widgets/stages/primary-stage/style.css', __FILE__));
+	wp_register_style('secondaryStage', plugins_url('widgets/stages/secondary-stage/style.css', __FILE__));
+	wp_register_style('tertiaryStage', plugins_url('widgets/stages/tertiary-stage/style.css', __FILE__));
+
 	// Cards & Teasers
 	wp_register_style('navCard', plugins_url('widgets/cards/nav-card/style.css', __FILE__));
 	wp_register_style('contentCardHorizontal', plugins_url('widgets/cards/content-card-horizontal/style.css', __FILE__));
@@ -125,7 +130,7 @@ function elementor_test_widgets_dependencies()
 	wp_register_style('jobOfferCard', plugins_url('widgets/cards/job-offer-card/style.css', __FILE__));
 	wp_register_style('benefitIconCard', plugins_url('widgets/cards/benefit-icon-card/style.css', __FILE__));
 
-	wp_register_style('tertiaryStage', plugins_url('widgets/stages/tertiary-stage/style.css', __FILE__));
+
 	wp_register_style('image', plugins_url('widgets/image/content/image.css', __FILE__));
 	wp_register_style('logoWall', plugins_url('widgets/logo-wall/style.css', __FILE__));
 

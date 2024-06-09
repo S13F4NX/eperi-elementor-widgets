@@ -62,33 +62,19 @@ class Eperi_Primary_Stage_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <div class="tertiaryStage">
-            <!-- <div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div>
-			<div></div> -->
-
-            <div style="grid-column: col-start / span 12;">
-                <div class="breadcrumb">Pagecategory – current Page title</div>
-                <div class="title">Headline Tertiary Stage pagetitle</div>
-
+        <div class="primaryStage bottom_margin_56 top_margin_40">
+            <div class="">
+                <div class="subline">Pagecategory – current Page title</div>
+                <div class="title_size_1">Headline Primary Stage pagetitle</div>
             </div>
-            <div style="grid-column: 2 / span 9">
-                <div>Stage description</div>
-                <div>CTAs</div>
+            <div class="top_margin_56" style="display: grid; grid-template-columns: 10px 0.3fr 0.7fr; gap:100px">
+                <div>1</div>
+                <div>
+                    <div class="copy_medium">Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. </div>
+                    <div class="button button_light_default top_margin_56">Eperi Button</div>
+                </div>
+                <div><img src="<?php echo esc_url($settings['image']['url']); ?>" alt="" class="default_image"></div>
             </div>
-            <div style="grid-column: col-start 11 / span 2;" class="stageImage">
-                <img src="<?php echo esc_url($settings['image']['url']); ?>" alt="">
-            </div>
-
         </div>
 
 <?php

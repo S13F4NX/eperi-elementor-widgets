@@ -129,6 +129,8 @@ function elementor_test_widgets_dependencies()
 	wp_register_style('textCtaCard', plugins_url('widgets/cards/text-cta-card/style.css', __FILE__));
 	wp_register_style('jobOfferCard', plugins_url('widgets/cards/job-offer-card/style.css', __FILE__));
 	wp_register_style('benefitIconCard', plugins_url('widgets/cards/benefit-icon-card/style.css', __FILE__));
+	wp_register_style('blogTeaser', plugins_url('widgets/teasers/blog-teaser/style.css', __FILE__));
+	wp_register_style('newsTeaser', plugins_url('widgets/teasers/news-teaser/style.css', __FILE__));
 
 
 	wp_register_style('image', plugins_url('widgets/image/content/image.css', __FILE__));

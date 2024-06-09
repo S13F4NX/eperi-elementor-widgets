@@ -1,0 +1,16 @@
+.logoWall {
+    display: flex;
+    gap: 32px;
+}
+
+.logoWall .logo {
+    display: grid;
+    place-items: center;
+
+    width: 203px;
+    height: 203px;
+
+    padding: 32px;
+
+    background-color: #fff;
+}

@@ -60,15 +60,15 @@ class Eperi_Logo_Wall_Widget extends \Elementor\Widget_Base
     {
         $settings = $this->get_settings_for_display();
 ?>
-        <div>
-            <h1>Logo Wall</h1>
-            <div style="display:flex; gap:20px; border:1px solid red;">
-                <?php
-                foreach ($settings['logos'] as $image) {
-                    echo '<img src="' . esc_attr($image['url']) . '" style="width:203px; height:203px; border:1px solid green;">';
-                }
-                ?>
-            </div>
+        <div class="logoWall">
+
+            <?php
+            foreach ($settings['logos'] as $image) { ?>
+                <div class="logo border_radius_12">
+                    <img src="<?php echo esc_attr($image['url']); ?>" alt="">
+                </div>
+            <?php }
+            ?>
         </div>
 <?php
     }

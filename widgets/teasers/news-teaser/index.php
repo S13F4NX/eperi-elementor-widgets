@@ -98,21 +98,24 @@ class Eperi_News_Teaser_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <div style="background-color:red; color:white; display:inline; padding:0px 5px">NewsTeaser</div>
+        <!-- <div style="background-color:red; color:white; display:inline; padding:0px 5px">NewsTeaser</div> -->
 
-        <div class="newsTeaser">
+        <div class="newsTeaser border_radius_24">
             <div><img src="<?php echo esc_url($settings['image']['url']); ?>" alt=""></div>
-            <div>
-                <h2><?php echo $settings['title']; ?></h2>
-                <div><?php echo $settings['text']; ?></div>
+            <div class="teaserContent">
+                <div class="secondary_copy">01.01.2024</div>
+                <h2 class="title_size_4 top_margin_4"><?php echo $settings['title']; ?></h2>
+                <div class="copy_mediu top_margin_16"><?php echo $settings['text']; ?></div>
 
-                <?php if (!empty($settings['link']['url'])) {
-                    $this->add_link_attributes('link', $settings['link']);
-                }
-                ?>
-                <a <?php echo $this->get_render_attribute_string('link'); ?>>
-                    Add link here
-                </a>
+                <div class="top_margin_32">
+                    <?php if (!empty($settings['link']['url'])) {
+                        $this->add_link_attributes('link', $settings['link']);
+                    }
+                    ?>
+                    <a <?php echo $this->get_render_attribute_string('link'); ?> class="button_light_tertiary ">
+                        Zum Artikel
+                    </a>
+                </div>
             </div>
         </div>
 

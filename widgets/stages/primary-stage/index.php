@@ -73,7 +73,7 @@ class Eperi_Primary_Stage_Widget extends \Elementor\Widget_Base
                     <div class="copy_medium">Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. </div>
                     <div class="button button_light_primary top_margin_56">Eperi Button</div>
                 </div>
-                <div><img src="<?php echo esc_url($settings['image']['url']); ?>" alt="" class="default_image"></div>
+                <div><img src="<?php echo esc_url($settings['image']['url']); ?>" alt="" class="default_image border_radius_24"></div>
             </div>
         </div>
 

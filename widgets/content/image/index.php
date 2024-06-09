@@ -64,7 +64,7 @@ class Eperi_Image_Widget extends \Elementor\Widget_Base
 		// Get image url
 ?>
 		<!-- <div style="background-color:red; color:white; display:inline; padding:0px 5px">Image</div> -->
-		<img src="<?php echo esc_url($settings['image']['url']); ?>" alt="" class="default_image">
+		<img src="<?php echo esc_url($settings['image']['url']); ?>" alt="" class="default_image border_radius_24">
 
 <?php
 	}

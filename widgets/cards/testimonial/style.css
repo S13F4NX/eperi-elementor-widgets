@@ -1,0 +1,36 @@
+.testimonialCard {
+    margin-top: -92px;
+}
+
+.testimonialCard .cardImage {
+    position: relative;
+
+    top: 90px;
+    left: 32px;
+
+    width: 186px;
+    height: 186px;
+
+    margin-bottom: 32px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(206.29deg, #52ffbb 15.61%, #00b4b4 86.39%);
+}
+
+.testimonialCard .cardImage img {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 176px;
+    height: 176px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+.testimonialCard .cardText {
+    background-color: #fff;
+    padding: 72px 32px;
+}

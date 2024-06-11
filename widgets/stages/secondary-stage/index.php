@@ -162,7 +162,6 @@ class Eperi_Secondary_Stage_Widget extends \Elementor\Widget_Base
                 <h1 class="title_size_1 top_margin_8"><?php echo nl2br($settings['headline']); ?></h1>
 
                 <?php
-
                 if (!empty($settings['label1'])) { ?>
                     <div class=" top_margin_56">
                         <a href="<?php echo $this->get_render_attribute_string('link1'); ?>" class="stageLink">

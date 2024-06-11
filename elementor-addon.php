@@ -46,6 +46,9 @@ function register_eperi_widget($widgets_manager)
 	require_once(__DIR__ . '/widgets/cards/nav-card/index.php');
 	$widgets_manager->register(new \Eperi_Nav_Card_Widget());
 
+	require_once(__DIR__ . '/widgets/cards/nav-card-switcher/index.php');
+	$widgets_manager->register(new \Eperi_Nav_Card_Switcher_Widget());
+
 	require_once(__DIR__ . '/widgets/cards/content-card-horizontal/index.php');
 	$widgets_manager->register(new \Eperi_Content_Card_Horizontal_Widget());
 
@@ -124,6 +127,7 @@ function elementor_test_widgets_dependencies()
 
 	// Cards & Teasers
 	wp_register_style('navCard', plugins_url('widgets/cards/nav-card/style.css', __FILE__));
+	wp_register_style('navCardSwitcher', plugins_url('widgets/cards/nav-card-switcher/style.css', __FILE__));
 	wp_register_style('contentCardHorizontal', plugins_url('widgets/cards/content-card-horizontal/style.css', __FILE__));
 	wp_register_style('contentCardVertical', plugins_url('widgets/cards/content-card-vertical/style.css', __FILE__));
 	wp_register_style('textCtaCard', plugins_url('widgets/cards/text-cta-card/style.css', __FILE__));

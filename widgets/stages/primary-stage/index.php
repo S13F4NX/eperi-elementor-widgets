@@ -67,11 +67,14 @@ class Eperi_Primary_Stage_Widget extends \Elementor\Widget_Base
                 <div class="subline">Pagecategory – current Page title</div>
                 <div class="title_size_1">Headline Primary Stage pagetitle</div>
             </div>
-            <div class="top_margin_56" style="display: grid; grid-template-columns: 10px 0.3fr 0.7fr; gap:100px">
-                <div>1</div>
-                <div>
-                    <div class="copy_medium">Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. </div>
-                    <div class="button button_light_primary top_margin_56">Eperi Button</div>
+
+            <div class="top_margin_56" style="display: grid; grid-template-columns: 0.3fr 0.7fr; gap:100px">
+                <div style="display:block">
+                    <div style="position:relative; border-left:1px solid #00B4B4; padding-left:115px;">
+                        <div class="copy_medium">Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. </div>
+                        <div class="button button_light_primary top_margin_56">Eperi Button</div>
+                        <div style="position:absolute; top:0px; left:0px; background-color:#00B4B4; width:4px; height:24px; border-radius: 0 0 4px 0"></div>
+                    </div>
                 </div>
                 <div><img src="<?php echo esc_url($settings['image']['url']); ?>" alt="" class="default_image border_radius_24"></div>
             </div>

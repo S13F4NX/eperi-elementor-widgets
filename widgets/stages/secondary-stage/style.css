@@ -4,7 +4,8 @@
 
 .secondaryStage .stageTeaser {
     position: absolute;
-    width: 673px;
+    width: 100%;
+    max-width: 673px;
     /* height: 484px; */
     left: 0px;
     bottom: 0px;
@@ -21,6 +22,8 @@
 }
 
 .secondaryStage .stageTeaser .breadcrumb {
+    display: inline-flex;
+    gap: 16px;
     color: #fff;
 }
 
@@ -34,10 +37,19 @@
     right: 0;
 }
 .secondaryStage .stageImage img {
-    width: 900px;
+    width: 100%;
     max-width: 1142px;
     max-height: 520px;
     object-fit: cover;
 
     border-radius: 0 0 24px 24px;
+}
+
+.secondaryStage .stageLink {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+
+    font-weight: 700;
+    color: #52ffbb;
 }

@@ -53,13 +53,6 @@ class Eperi_Benefit_Icon_Card_Widget extends \Elementor\Widget_Base
                     'value' => 'fas fa-circle',
                     'library' => 'fa-solid',
                 ],
-                // 'recommended' => [
-                //     'fa-brands' => [
-                //         'facebook',
-                //         'twitter',
-                //         'instagram',
-                //     ],
-                // ],
             ]
         );
 

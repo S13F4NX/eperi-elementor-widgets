@@ -146,7 +146,7 @@ class Eperi_Secondary_Stage_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <div class="secondaryStage border">
+        <div class="secondaryStage">
 
             <div class="stageTeaser border_radius_24">
                 <a href="" class="breadcrumb subline">

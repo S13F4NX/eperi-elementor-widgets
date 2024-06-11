@@ -1,2 +1,18 @@
 .primaryStage {
+    position: relative;
+    border-bottom: 1px solid #00b4b4;
+    padding-bottom: 56px;
+}
+
+.primaryStage .topimage {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.primaryStage .topimage img {
+    width: 200px;
+    height: 200px;
+
+    object-fit: cover;
 }

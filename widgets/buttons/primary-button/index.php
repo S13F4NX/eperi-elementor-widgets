@@ -43,6 +43,15 @@ class Eperi_Primary_Button_Widget extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_control(
+            'label',
+            [
+                'label' => esc_html__('Button Label', 'textdomain'),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'placeholder' => esc_html__('Add label here', 'textdomain'),
+            ]
+        );
+
 
         $this->add_control(
             'cta',
@@ -57,6 +66,16 @@ class Eperi_Primary_Button_Widget extends \Elementor\Widget_Base
                     // 'custom_attributes' => '',
                 ],
                 'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'hubSpotCTA',
+            [
+                'label' => esc_html__('HubSpot CTA', 'textdomain'),
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+                // 'default' => esc_html__('Add your title here', 'textdomain'),
+                'placeholder' => esc_html__('Type your title here', 'textdomain'),
             ]
         );
 
@@ -75,15 +94,22 @@ class Eperi_Primary_Button_Widget extends \Elementor\Widget_Base
 
         <!-- <div style="background-color:red; color:white; display:inline; padding:0px 5px">Primary Button</div> -->
 
-        <div class="button button_light_primary">
-            <?php if (!empty($settings['cta']['url'])) {
-                $this->add_link_attributes('cta', $settings['cta']);
-            }
-            ?>
-            <a <?php echo $this->get_render_attribute_string('cta'); ?>>
-                Add CTA here
-            </a>
-        </div>
+        <?php
+
+        if (!empty($settings['hubSpotCTA'])) {
+            echo $settings['hubSpotCTA'];
+        } else { ?>
+            <div class="button button_light_primary">
+                <?php if (!empty($settings['cta']['url'])) {
+                    $this->add_link_attributes('cta', $settings['cta']);
+                }
+                ?>
+                <a <?php echo $this->get_render_attribute_string('cta'); ?>>
+                    <?php echo !empty($settings['label']) ? $settings['label'] : 'Mehr erfahren'; ?>
+                </a>
+            </div>
+        <?php } ?>
+
 
 
 <?php

@@ -131,7 +131,16 @@ class Eperi_Primary_Stage_Widget extends \Elementor\Widget_Base
 
         <div class="primaryStage bottom_margin_56 top_margin_40">
             <div class="">
-                <div class="subline">Pagecategory – current Page title</div>
+                <a href="" class="breadcrumb subline">
+                    <div>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.726361 10.3663L9.71144 17.679C10.0083 17.9165 10.4437 17.6988 10.4437 17.3129V11.1111L18.4472 11.1111C18.9995 11.1111 19.4472 10.6634 19.4472 10.1111V9.8889C19.4472 9.33661 18.9995 8.8889 18.4472 8.8889L10.4437 8.8889V2.67748C10.4437 2.30146 10.0083 2.08376 9.72133 2.32125L0.726361 9.64389C0.498765 9.8319 0.498765 10.1782 0.726361 10.3663Z" fill="#1C1C1C" />
+                        </svg>
+                    </div>
+                    <div>
+                        page category – current page title <span class="dynamic">[DYNAMIC ⚡️]</span>
+                    </div>
+                </a>
                 <div class="title_size_1"><?php echo nl2br($settings['headline']); ?></div>
             </div>
 

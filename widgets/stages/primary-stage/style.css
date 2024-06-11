@@ -4,6 +4,12 @@
     padding-bottom: 56px;
 }
 
+.primaryStage .breadcrumb {
+    display: inline-flex;
+    gap: 16px;
+    color: #1c1c1c;
+}
+
 .primaryStage .topimage {
     position: absolute;
     top: 0px;

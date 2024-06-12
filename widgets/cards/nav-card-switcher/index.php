@@ -134,32 +134,35 @@ class Eperi_Nav_Card_Switcher_Widget extends \Elementor\Widget_Base
 
 
             <div class="selector">
-                <div> <select name="cars" id="cars">
-                        <?php $settings = $this->get_settings_for_display();
+                <div>
+                    <select name="links" id="links">
+                        <?php
+                        $settings = $this->get_settings_for_display();
                         $links = $settings['links_list'];
 
                         if (!empty($links)) {
                             foreach ($links as $link) {
-                                $target = $link['link_url']['is_external'] ? ' target="_blank"' : '';
-                                $nofollow = $link['link_url']['nofollow'] ? ' rel="nofollow"' : '';
-                                echo '<option><a href="' . esc_url($link['link_url']['url']) . '"' . $target . $nofollow . '>' . esc_html($link['link_text']) . '</a></option>';
+                                echo '<option value="' . esc_url($link['link_url']['url']) . '">' . esc_html($link['link_text']) . '</option>';
                             }
                         } ?>
-                        <!-- <option value="label1">Label 1</option>
-                        <option value="label2">Label 2</option>
-                        <option value="label3">Label 3</option>
-                        <option value="label4">Label 4</option> -->
-                    </select></div>
-                <div>
-                    <button class="button button_light_secondary">Mehr entdecken</button>
+                    </select>
                 </div>
-
+                <div>
+                    <button id="open-link-button" class="button button_light_secondary">Mehr entdecken</button>
+                </div>
             </div>
-
-
-
-
         </div>
+
+        <script>
+            document.getElementById('open-link-button').addEventListener('click', function() {
+                var selectElement = document.getElementById('links');
+                var selectedValue = selectElement.options[selectElement.selectedIndex].value;
+
+                if (selectedValue) {
+                    window.open(selectedValue, '_blank');
+                }
+            });
+        </script>
 <?php
     }
 }

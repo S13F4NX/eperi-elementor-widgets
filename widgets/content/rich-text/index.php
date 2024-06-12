@@ -55,6 +55,17 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_control(
+            'bulletIcon',
+            [
+                'label' => esc_html__('Choose bullet icon', 'textdomain'),
+                'type' => \Elementor\Controls_Manager::MEDIA,
+                'default' => [
+                    'url' => \Elementor\Utils::get_placeholder_image_src(),
+                ],
+            ]
+        );
+
 
 
         $this->end_controls_section();
@@ -65,8 +76,46 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <!-- <div style="background-color:red; color:white; display:inline; padding:0px 5px">Rich Text</div> -->
+
+
+        <style>
+            .richText ul {
+                list-style-type: none;
+                /* Remove default bullets */
+                padding-left: 0px;
+                /* Adjust as needed */
+            }
+
+            .richText li {
+                position: relative;
+                padding-left: 60px;
+                margin-bottom: 16px;
+                /* Space for the custom icon */
+            }
+
+
+
+            .richText ul li::before {
+                content: '';
+                background-image: url('<?php echo esc_url($settings['bulletIcon']['url']) ?>');
+                /* Replace with the path to your icon */
+                background-size: contain;
+                /* Ensure the image fits within the defined size */
+                background-repeat: no-repeat;
+                /* Prevent the image from repeating */
+                position: absolute;
+                left: 0;
+                top: 20px;
+                transform: translateY(-50%);
+                /* Center the icon vertically */
+                width: 32px;
+                /* Define the width of the icon */
+                height: 32px;
+                /* Define the height of the icon */
+            }
+        </style>
         <div class="richText copy_medium"><?php echo $settings['text']; ?></div>
+
 
 <?php
     }

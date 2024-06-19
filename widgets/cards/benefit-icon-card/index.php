@@ -86,7 +86,7 @@ class Eperi_Benefit_Icon_Card_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <div class="">
+        <div class="benefit_card">
             <div>
                 <div class="my-icon-wrapper" style="width:56px; height:56px;">
                     <?php \Elementor\Icons_Manager::render_icon($settings['icon'], ['aria-hidden' => 'true', 'class' => 'benefit_icon_svg']); ?>

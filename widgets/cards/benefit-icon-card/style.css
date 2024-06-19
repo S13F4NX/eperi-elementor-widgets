@@ -1,5 +1,6 @@
-.benefit_icon_svg {
-    font-size: 56px; /* Adjust the size as needed */
+.benefit_card svg {
     width: 56px;
     height: 56px;
+    fill: #00b4b4;
+    color: #00b4b4;
 }

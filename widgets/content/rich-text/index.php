@@ -115,6 +115,10 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
                 background-color: #00b4b4 !important;
                 -webkit-mask-image: url('<?php echo esc_url($settings['bulletIcon']['url']) ?>');
                 mask-image: url('<?php echo esc_url($settings['bulletIcon']['url']) ?>');
+                /* fill: #00b4b4;
+                color: #00b4b4; */
+
+
             }
 
 
@@ -129,8 +133,6 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
             }
         </style>
         <div class="richText copy_medium"><?php echo $settings['text']; ?></div>
-
-
 <?php
     }
 }

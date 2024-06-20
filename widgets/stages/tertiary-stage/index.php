@@ -48,6 +48,7 @@ class Eperi_Tertiary_Stage_Widget extends \Elementor\Widget_Base
 			[
 				'label' => esc_html__('Headline', 'textdomain'),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
+				'label_block' => true,
 				// 'default' => esc_html__('Add your headline here', 'textdomain'),
 				'placeholder' => esc_html__('Type your headline here', 'textdomain'),
 			]
@@ -79,6 +80,8 @@ class Eperi_Tertiary_Stage_Widget extends \Elementor\Widget_Base
 			'link1',
 			[
 				'label' => esc_html__('Link 1', 'textdomain'),
+				'label_block' => true,
+
 				'type' => \Elementor\Controls_Manager::URL,
 				'options' => ['url', 'is_external', 'nofollow'],
 				'default' => [
@@ -95,6 +98,8 @@ class Eperi_Tertiary_Stage_Widget extends \Elementor\Widget_Base
 			'label1',
 			[
 				'label' => esc_html__('Label 1', 'textdomain'),
+				'label_block' => true,
+
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'placeholder' => esc_html__('Add label here', 'textdomain'),
 			]
@@ -104,6 +109,8 @@ class Eperi_Tertiary_Stage_Widget extends \Elementor\Widget_Base
 			'icon1',
 			[
 				'label' => esc_html__('Icon 1', 'textdomain'),
+				'label_block' => true,
+
 				'type' => \Elementor\Controls_Manager::ICONS,
 				'default' => [
 					'value' => 'fas fa-circle',
@@ -116,6 +123,8 @@ class Eperi_Tertiary_Stage_Widget extends \Elementor\Widget_Base
 			'link2',
 			[
 				'label' => esc_html__('Link 2', 'textdomain'),
+				'label_block' => true,
+
 				'type' => \Elementor\Controls_Manager::URL,
 				'options' => ['url', 'is_external', 'nofollow'],
 				'default' => [
@@ -124,7 +133,6 @@ class Eperi_Tertiary_Stage_Widget extends \Elementor\Widget_Base
 					'nofollow' => true,
 					// 'custom_attributes' => '',
 				],
-				'label_block' => true,
 			]
 		);
 
@@ -132,6 +140,8 @@ class Eperi_Tertiary_Stage_Widget extends \Elementor\Widget_Base
 			'label2',
 			[
 				'label' => esc_html__('Label 2', 'textdomain'),
+				'label_block' => true,
+
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'placeholder' => esc_html__('Add label here', 'textdomain'),
 			]
@@ -141,6 +151,8 @@ class Eperi_Tertiary_Stage_Widget extends \Elementor\Widget_Base
 			'icon2',
 			[
 				'label' => esc_html__('Icon 2', 'textdomain'),
+				'label_block' => true,
+
 				'type' => \Elementor\Controls_Manager::ICONS,
 				'default' => [
 					'value' => 'fas fa-circle',

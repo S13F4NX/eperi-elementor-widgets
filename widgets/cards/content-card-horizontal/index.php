@@ -47,6 +47,8 @@ class Eperi_Content_Card_Horizontal_Widget extends \Elementor\Widget_Base
             'title',
             [
                 'label' => esc_html__('Title', 'textdomain'),
+                'label_block'    => true,
+
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'default' => esc_html__('Add your title here', 'textdomain'),
                 'placeholder' => esc_html__('Type your title here', 'textdomain'),

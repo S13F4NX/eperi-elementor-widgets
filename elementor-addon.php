@@ -45,6 +45,9 @@ function register_eperi_widget($widgets_manager)
 	require_once(__DIR__ . '/widgets/headlines/subline/index.php');
 	$widgets_manager->register(new \Eperi_Subline_Widget());
 
+	require_once(__DIR__ . '/widgets/headlines/tagline/index.php');
+	$widgets_manager->register(new \Eperi_Tagline_Widget());
+
 	// Cards & Teasers
 	require_once(__DIR__ . '/widgets/cards/nav-card/index.php');
 	$widgets_manager->register(new \Eperi_Nav_Card_Widget());

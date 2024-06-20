@@ -1,15 +1,15 @@
 <?php
-class Eperi_H2_Widget extends \Elementor\Widget_Base
+class Eperi_Subline_Widget extends \Elementor\Widget_Base
 {
 
     public function get_name()
     {
-        return 'h2';
+        return 'subline';
     }
 
     public function get_title()
     {
-        return esc_html__('H2', 'elementor-addon');
+        return esc_html__('Sublint', 'elementor-addon');
     }
 
     public function get_icon()
@@ -28,7 +28,7 @@ class Eperi_H2_Widget extends \Elementor\Widget_Base
 
     public function get_style_depends()
     {
-        return ['h2'];
+        return ['subline'];
     }
 
 
@@ -46,11 +46,10 @@ class Eperi_H2_Widget extends \Elementor\Widget_Base
         $this->add_control(
             'headline',
             [
-                'label' => esc_html__('Headline', 'textdomain'),
-                'label_block'    => true,
-                'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => esc_html__('Add your headline here', 'textdomain'),
-                'placeholder' => esc_html__('Type your headline here', 'textdomain'),
+                'label' => esc_html__('Subline', 'textdomain'),
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+                // 'default' => esc_html__('Add your subline here', 'textdomain'),
+                'placeholder' => esc_html__('Type your subline here', 'textdomain'),
             ]
         );
 
@@ -62,8 +61,8 @@ class Eperi_H2_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <!-- <div style="background-color:red; color:white; display:inline; padding:0px 5px">H2 Headline</div> -->
-        <h2 class="title_size_2"><?php echo $settings['headline']; ?></h2>
+        <!-- <div style="background-color:red; color:white; display:inline; padding:0px 5px">H4 Headline</div> -->
+        <h4 class="title_size_4"><?php echo $settings['headline']; ?></h4>
 
 <?php
     }

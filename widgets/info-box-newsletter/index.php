@@ -75,7 +75,7 @@ class Eperi_Info_Box_Newsletter_Widget extends \Elementor\Widget_Base
 
         <div class="infoBoxNewsletter">
             <h3 class="title_size_3"><?php echo $settings['title']; ?></h3>
-            <div class="top_margin_32" style="display:grid; grid-template-columns: 1fr 1fr; gap:100px;">
+            <div class="top_margin_32" style="display:grid; grid-template-columns: 1fr 1fr; gap:150px;">
                 <div class="copy_medium"><?php echo $settings['text']; ?></div>
                 <div style="align-self: end;">
                     <label class="secondary_copy">E-Mailadresse</label>

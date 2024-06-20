@@ -48,7 +48,7 @@ class Eperi_H2_Widget extends \Elementor\Widget_Base
             [
                 'label' => esc_html__('Headline', 'textdomain'),
                 'label_block'    => true,
-                'type' => \Elementor\Controls_Manager::TEXT,
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
                 'default' => esc_html__('Add your headline here', 'textdomain'),
                 'placeholder' => esc_html__('Type your headline here', 'textdomain'),
             ]
@@ -63,7 +63,7 @@ class Eperi_H2_Widget extends \Elementor\Widget_Base
 ?>
 
         <!-- <div style="background-color:red; color:white; display:inline; padding:0px 5px">H2 Headline</div> -->
-        <h2 class="title_size_2"><?php echo $settings['headline']; ?></h2>
+        <h2 class="title_size_2"><?php echo nl2br($settings['headline']); ?></h2>
 
 <?php
     }

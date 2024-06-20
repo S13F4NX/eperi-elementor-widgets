@@ -113,6 +113,15 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
                 height: 32px;
                 /* Define the height of the icon */
             }
+
+            .richText p {
+                margin: 0;
+                margin-bottom: 20px;
+            }
+
+            .richText p:last-child {
+                margin-bottom: 0 !important;
+            }
         </style>
         <div class="richText copy_medium"><?php echo $settings['text']; ?></div>
 

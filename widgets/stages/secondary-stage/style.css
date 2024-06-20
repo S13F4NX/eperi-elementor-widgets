@@ -53,3 +53,10 @@
     font-weight: 700;
     color: #52ffbb;
 }
+
+.secondaryStage .cta svg {
+    width: 20px;
+    height: 20px;
+    color: #52ffbb;
+    fill: #52ffbb;
+}

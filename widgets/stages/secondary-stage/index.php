@@ -163,7 +163,7 @@ class Eperi_Secondary_Stage_Widget extends \Elementor\Widget_Base
 
                 <?php
                 if (!empty($settings['label1'])) { ?>
-                    <div class=" top_margin_56">
+                    <div class=" top_margin_56 cta">
                         <a href="<?php echo $this->get_render_attribute_string('link1'); ?>" class="stageLink">
                             <?php echo !empty($settings['label1']) ? $settings['label1'] : 'Mehr erfahren'; ?>
                             <?php \Elementor\Icons_Manager::render_icon($settings['icon1'], ['aria-hidden' => 'true', 'class' => 'icon_svg']); ?>
@@ -174,7 +174,7 @@ class Eperi_Secondary_Stage_Widget extends \Elementor\Widget_Base
 
 
                 <?php if (!empty($settings['label2'])) { ?>
-                    <div class="top_margin_16">
+                    <div class="top_margin_16 cta">
                         <a href="<?php echo $this->get_render_attribute_string('link2'); ?>" class="stageLink">
                             <?php echo !empty($settings['label2']) ? $settings['label2'] : 'Mehr erfahren'; ?>
                             <?php \Elementor\Icons_Manager::render_icon($settings['icon2'], ['aria-hidden' => 'true', 'class' => 'icon_svg']); ?>

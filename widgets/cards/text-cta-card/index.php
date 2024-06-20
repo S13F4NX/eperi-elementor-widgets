@@ -47,8 +47,8 @@ class Eperi_Text_Cta_Card_Widget extends \Elementor\Widget_Base
             'title',
             [
                 'label' => esc_html__('Title', 'textdomain'),
+                'label_block' => true,
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => esc_html__('Add your title here', 'textdomain'),
                 'placeholder' => esc_html__('Type your title here', 'textdomain'),
             ]
         );
@@ -58,7 +58,6 @@ class Eperi_Text_Cta_Card_Widget extends \Elementor\Widget_Base
             [
                 'label' => esc_html__('Text', 'textdomain'),
                 'type' => \Elementor\Controls_Manager::WYSIWYG,
-                'default' => esc_html__('Add your text here', 'textdomain'),
                 'placeholder' => esc_html__('Type your text here', 'textdomain'),
             ]
         );
@@ -80,6 +79,16 @@ class Eperi_Text_Cta_Card_Widget extends \Elementor\Widget_Base
         );
 
         $this->add_control(
+            'cta_label',
+            [
+                'label' => esc_html__('CTA Label', 'textdomain'),
+                'label_block' => true,
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'placeholder' => esc_html__('Type your title here', 'textdomain'),
+            ]
+        );
+
+        $this->add_control(
             'link',
             [
                 'label' => esc_html__('Link', 'textdomain'),
@@ -92,6 +101,16 @@ class Eperi_Text_Cta_Card_Widget extends \Elementor\Widget_Base
                     // 'custom_attributes' => '',
                 ],
                 'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'link_label',
+            [
+                'label' => esc_html__('Link Label', 'textdomain'),
+                'label_block' => true,
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'placeholder' => esc_html__('Type your title here', 'textdomain'),
             ]
         );
 
@@ -115,7 +134,7 @@ class Eperi_Text_Cta_Card_Widget extends \Elementor\Widget_Base
             }
             ?>
             <a <?php echo $this->get_render_attribute_string('cta'); ?> class="button button_light_primary top_margin_32">
-                Add cta here
+                <?php echo $settings['cta_label']; ?>
             </a>
 
             <div class="top_margin_24">
@@ -124,7 +143,7 @@ class Eperi_Text_Cta_Card_Widget extends \Elementor\Widget_Base
                 }
                 ?>
                 <a <?php echo $this->get_render_attribute_string('link'); ?> class="button_light_tertiary">
-                    Add link here
+                    <?php echo $settings['link_label']; ?>
                 </a>
 
             </div>

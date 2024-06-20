@@ -47,6 +47,7 @@ class Eperi_Info_Box_Content_Widget extends \Elementor\Widget_Base
             'title',
             [
                 'label' => esc_html__('Title', 'textdomain'),
+                'label_block' => true,
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'default' => esc_html__('Add your title here', 'textdomain'),
                 'placeholder' => esc_html__('Type your title here', 'textdomain'),
@@ -57,6 +58,7 @@ class Eperi_Info_Box_Content_Widget extends \Elementor\Widget_Base
             'text',
             [
                 'label' => esc_html__('Text', 'textdomain'),
+                'label_block' => true,
                 'type' => \Elementor\Controls_Manager::WYSIWYG,
                 'default' => esc_html__('Add your text here', 'textdomain'),
                 'placeholder' => esc_html__('Type your text here', 'textdomain'),

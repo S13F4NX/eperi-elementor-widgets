@@ -48,7 +48,6 @@ class Eperi_Content_Card_Horizontal_Widget extends \Elementor\Widget_Base
             [
                 'label' => esc_html__('Title', 'textdomain'),
                 'label_block'    => true,
-
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'default' => esc_html__('Add your title here', 'textdomain'),
                 'placeholder' => esc_html__('Type your title here', 'textdomain'),
@@ -78,6 +77,17 @@ class Eperi_Content_Card_Horizontal_Widget extends \Elementor\Widget_Base
                     // 'custom_attributes' => '',
                 ],
                 'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
+            'link_label',
+            [
+                'label' => esc_html__('Link Label', 'textdomain'),
+                'label_block'    => true,
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__('Add your title here', 'textdomain'),
+                'placeholder' => esc_html__('Type your title here', 'textdomain'),
             ]
         );
 
@@ -112,8 +122,7 @@ class Eperi_Content_Card_Horizontal_Widget extends \Elementor\Widget_Base
                     }
                     ?>
                     <a <?php echo $this->get_render_attribute_string('link'); ?> class="button_light_tertiary">
-                        Add link here
-                    </a>
+                        <?php echo $settings['link_label']; ?> </a>
                 </div>
             </div>
         </div>

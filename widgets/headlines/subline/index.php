@@ -9,7 +9,7 @@ class Eperi_Subline_Widget extends \Elementor\Widget_Base
 
     public function get_title()
     {
-        return esc_html__('Sublint', 'elementor-addon');
+        return esc_html__('Subline', 'elementor-addon');
     }
 
     public function get_icon()

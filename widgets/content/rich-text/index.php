@@ -97,7 +97,6 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
 
             .richText ul li::before {
                 content: '';
-                background-image: url('<?php echo esc_url($settings['bulletIcon']['url']) ?>');
                 /* Replace with the path to your icon */
                 background-size: contain;
                 /* Ensure the image fits within the defined size */
@@ -112,7 +111,13 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
                 /* Define the width of the icon */
                 height: 32px;
                 /* Define the height of the icon */
+
+                background-color: #00b4b4 !important;
+                -webkit-mask-image: url('<?php echo esc_url($settings['bulletIcon']['url']) ?>');
+                mask-image: url('<?php echo esc_url($settings['bulletIcon']['url']) ?>');
             }
+
+
 
             .richText p {
                 margin: 0;

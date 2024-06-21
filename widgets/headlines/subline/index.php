@@ -53,6 +53,17 @@ class Eperi_Subline_Widget extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_control(
+            'headline_color',
+            [
+                'label' => esc_html__('Headline Color', 'textdomain'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .headline-color' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
         $this->end_controls_section();
     }
 
@@ -62,7 +73,7 @@ class Eperi_Subline_Widget extends \Elementor\Widget_Base
 ?>
 
         <!-- <div style="background-color:red; color:white; display:inline; padding:0px 5px">H4 Headline</div> -->
-        <h4 class="title_size_4"><?php echo $settings['headline']; ?></h4>
+        <h4 class="title_size_4 headline-color"><?php echo $settings['headline']; ?></h4>
 
 <?php
     }

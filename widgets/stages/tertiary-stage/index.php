@@ -161,6 +161,33 @@ class Eperi_Tertiary_Stage_Widget extends \Elementor\Widget_Base
 			]
 		);
 
+		$this->add_control(
+			'button',
+			[
+				'label' => esc_html__('Button', 'textdomain'),
+				'label_block' => true,
+				'type' => \Elementor\Controls_Manager::URL,
+				'options' => ['url', 'is_external', 'nofollow'],
+				'default' => [
+					'url' => '',
+					'is_external' => true,
+					'nofollow' => true,
+					// 'custom_attributes' => '',
+				],
+				'label_block' => true,
+			]
+		);
+
+		$this->add_control(
+			'button_label',
+			[
+				'label' => esc_html__('Button Label', 'textdomain'),
+				'label_block' => true,
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__('Add label here', 'textdomain'),
+			]
+		);
+
 		$this->end_controls_section();
 	}
 
@@ -205,6 +232,14 @@ class Eperi_Tertiary_Stage_Widget extends \Elementor\Widget_Base
 							</a>
 						<?php } ?>
 					</div>
+					<?php
+					if (!empty($settings['button_label'])) { ?>
+						<div>
+							<a href="<?php echo $this->get_render_attribute_string('button'); ?>" class="button button_light_primary">
+								<?php echo ($settings['button_label'])  ?>
+							</a>
+						</div>
+					<?php } ?>
 					<div style="position:absolute; top:0px; left:0px; background-color:#00B4B4; width:4px; height:24px; border-radius: 0 0 4px 0"></div>
 				</div>
 			</div>

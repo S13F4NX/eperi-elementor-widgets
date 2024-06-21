@@ -212,7 +212,7 @@ class Eperi_Tertiary_Stage_Widget extends \Elementor\Widget_Base
 			</div>
 
 			<div class="top_margin_40" style="display:block; margin-bottom: 115px;">
-				<div style="position:relative; border-left:1px solid #00B4B4; padding-left:115px;">
+				<div style="position:relative; border-left:1px solid #00B4B4; padding-left:145px;">
 					<div class="copy_medium" style="width:100%; max-width:450px"><?php echo $settings['text']; ?></div>
 					<div class="top_margin_24 stageLinks">
 						<?php

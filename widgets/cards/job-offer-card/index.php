@@ -47,6 +47,7 @@ class Eperi_Job_Offer_Card_Widget extends \Elementor\Widget_Base
             'title',
             [
                 'label' => esc_html__('Title', 'textdomain'),
+                'label_block' => true,
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'default' => esc_html__('Add your title here', 'textdomain'),
                 'placeholder' => esc_html__('Type your title here', 'textdomain'),
@@ -63,6 +64,8 @@ class Eperi_Job_Offer_Card_Widget extends \Elementor\Widget_Base
             ]
         );
 
+
+
         $this->add_control(
             'link',
             [
@@ -78,6 +81,8 @@ class Eperi_Job_Offer_Card_Widget extends \Elementor\Widget_Base
                 'label_block' => true,
             ]
         );
+
+
 
 
         $this->end_controls_section();

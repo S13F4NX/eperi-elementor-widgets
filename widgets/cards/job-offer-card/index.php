@@ -82,6 +82,16 @@ class Eperi_Job_Offer_Card_Widget extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_control(
+            'link_label',
+            [
+                'label' => esc_html__('Link Label', 'textdomain'),
+                'label_block'    => true,
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => esc_html__('Add your title here', 'textdomain'),
+                'placeholder' => esc_html__('Type your title here', 'textdomain'),
+            ]
+        );
 
 
 
@@ -93,9 +103,8 @@ class Eperi_Job_Offer_Card_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <div style="background-color:red; color:white; display:inline; padding:0px 5px">Job Offer Card</div>
 
-        <div class="jobOfferCard">
+        <div class="jobOfferCard border_radius_24">
             <h2><?php echo $settings['title']; ?></h2>
             <div><?php echo $settings['text']; ?></div>
 
@@ -103,8 +112,8 @@ class Eperi_Job_Offer_Card_Widget extends \Elementor\Widget_Base
                 $this->add_link_attributes('link', $settings['link']);
             }
             ?>
-            <a <?php echo $this->get_render_attribute_string('link'); ?>>
-                Add link here
+            <a class="button button_light_secondary" <?php echo $this->get_render_attribute_string('link'); ?>>
+                <?php echo $settings['link_label']; ?>
             </a>
         </div>
 

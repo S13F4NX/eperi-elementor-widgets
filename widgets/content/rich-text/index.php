@@ -56,6 +56,17 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
         );
 
         $this->add_control(
+            'text_color',
+            [
+                'label' => esc_html__('Text Color', 'textdomain'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .text-color' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        $this->add_control(
             'bulletIcon',
             [
                 'label' => esc_html__('Choose bullet icon', 'textdomain'),
@@ -132,7 +143,7 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
                 margin-bottom: 0 !important;
             }
         </style>
-        <div class="richText copy_medium"><?php echo $settings['text']; ?></div>
+        <div class="richText copy_medium text-color"><?php echo $settings['text']; ?></div>
 <?php
     }
 }

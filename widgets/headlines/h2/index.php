@@ -54,6 +54,17 @@ class Eperi_H2_Widget extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_control(
+            'headline_color',
+            [
+                'label' => esc_html__('Headline Color', 'textdomain'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .headline-color' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
         $this->end_controls_section();
     }
 
@@ -63,7 +74,7 @@ class Eperi_H2_Widget extends \Elementor\Widget_Base
 ?>
 
         <!-- <div style="background-color:red; color:white; display:inline; padding:0px 5px">H2 Headline</div> -->
-        <h2 class="title_size_2"><?php echo nl2br($settings['headline']); ?></h2>
+        <h2 class="title_size_2 headline-color"><?php echo nl2br($settings['headline']); ?></h2>
 
 <?php
     }

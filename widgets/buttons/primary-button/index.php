@@ -47,6 +47,7 @@ class Eperi_Primary_Button_Widget extends \Elementor\Widget_Base
             'label',
             [
                 'label' => esc_html__('Button Label', 'textdomain'),
+                'label_block' => true,
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'placeholder' => esc_html__('Add label here', 'textdomain'),
             ]

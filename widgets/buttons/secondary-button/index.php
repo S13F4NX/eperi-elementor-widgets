@@ -60,6 +60,16 @@ class Eperi_Secondary_Button_Widget extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_control(
+            'label',
+            [
+                'label' => esc_html__('Label', 'textdomain'),
+                'label_block' => true,
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'placeholder' => esc_html__('Add label here', 'textdomain'),
+            ]
+        );
+
 
 
 
@@ -79,7 +89,7 @@ class Eperi_Secondary_Button_Widget extends \Elementor\Widget_Base
             }
             ?>
             <a <?php echo $this->get_render_attribute_string('cta'); ?>>
-                Add CTA here
+                <?php echo $settings['label']; ?>
             </a>
         </div>
 

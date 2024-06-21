@@ -47,6 +47,7 @@ class Eperi_Testimonial_Card_Widget extends \Elementor\Widget_Base
             'firstName',
             [
                 'label' => esc_html__('First name', 'textdomain'),
+                'label_block' => true,
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'default' => esc_html__('Add first name here', 'textdomain'),
                 'placeholder' => esc_html__('Add first name here', 'textdomain'),
@@ -57,6 +58,7 @@ class Eperi_Testimonial_Card_Widget extends \Elementor\Widget_Base
             'lastName',
             [
                 'label' => esc_html__('Last lame', 'textdomain'),
+                'label_block' => true,
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'default' => esc_html__('Add last name here', 'textdomain'),
                 'placeholder' => esc_html__('Add last name here', 'textdomain'),
@@ -67,6 +69,7 @@ class Eperi_Testimonial_Card_Widget extends \Elementor\Widget_Base
             'jobTitle',
             [
                 'label' => esc_html__('Job title', 'textdomain'),
+                'label_block' => true,
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'default' => esc_html__('Add job title here', 'textdomain'),
                 'placeholder' => esc_html__('Add job title here', 'textdomain'),

@@ -163,8 +163,12 @@ class Eperi_Secondary_Stage_Widget extends \Elementor\Widget_Base
 
                 <?php
                 if (!empty($settings['label1'])) { ?>
+                    <?php if (!empty($settings['link1']['url'])) {
+                        $this->add_link_attributes('link1', $settings['link1']);
+                    }
+                    ?>
                     <div class=" top_margin_56 cta">
-                        <a href="<?php echo $this->get_render_attribute_string('link1'); ?>" class="stageLink">
+                        <a <?php echo $this->get_render_attribute_string('link1'); ?> class="stageLink">
                             <?php echo !empty($settings['label1']) ? $settings['label1'] : 'Mehr erfahren'; ?>
                             <?php \Elementor\Icons_Manager::render_icon($settings['icon1'], ['aria-hidden' => 'true', 'class' => 'icon_svg']); ?>
                         </a>
@@ -174,8 +178,12 @@ class Eperi_Secondary_Stage_Widget extends \Elementor\Widget_Base
 
 
                 <?php if (!empty($settings['label2'])) { ?>
+                    <?php if (!empty($settings['link2']['url'])) {
+                        $this->add_link_attributes('link2', $settings['link2']);
+                    }
+                    ?>
                     <div class="top_margin_16 cta">
-                        <a href="<?php echo $this->get_render_attribute_string('link2'); ?>" class="stageLink">
+                        <a <?php echo $this->get_render_attribute_string('link2'); ?> class="stageLink">
                             <?php echo !empty($settings['label2']) ? $settings['label2'] : 'Mehr erfahren'; ?>
                             <?php \Elementor\Icons_Manager::render_icon($settings['icon2'], ['aria-hidden' => 'true', 'class' => 'icon_svg']); ?>
                         </a>

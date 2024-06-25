@@ -83,7 +83,7 @@ class Eperi_Tertiary_Stage_Widget extends \Elementor\Widget_Base
 				'label_block' => true,
 
 				'type' => \Elementor\Controls_Manager::URL,
-				'options' => ['url', 'is_external', 'nofollow'],
+				'options' => ['url', 'is_external', 'nofollow', 'custom_attributes'],
 				'default' => [
 					'url' => '',
 					'is_external' => false,
@@ -217,16 +217,22 @@ class Eperi_Tertiary_Stage_Widget extends \Elementor\Widget_Base
 					<div class="top_margin_24 stageLinks">
 						<?php
 						if (!empty($settings['label1'])) { ?>
-
-							<a href="<?php echo $this->get_render_attribute_string('link1'); ?>" class="stageLink">
+							<?php if (!empty($settings['link1']['url'])) {
+								$this->add_link_attributes('link1', $settings['link1']);
+							}
+							?>
+							<a <?php echo $this->get_render_attribute_string('link1'); ?> class="stageLink">
 								<?php echo !empty($settings['label1']) ? $settings['label1'] : 'Mehr erfahren'; ?>
 								<?php \Elementor\Icons_Manager::render_icon($settings['icon1'], ['aria-hidden' => 'true', 'class' => 'icon_svg']); ?>
 							</a>
-
 						<?php } ?>
 
 						<?php if (!empty($settings['label2'])) { ?>
-							<a href="<?php echo $this->get_render_attribute_string('link2'); ?>" class="stageLink">
+							<?php if (!empty($settings['link2']['url'])) {
+								$this->add_link_attributes('link2', $settings['link2']);
+							}
+							?>
+							<a <?php echo $this->get_render_attribute_string('link2'); ?> class="stageLink">
 								<?php echo !empty($settings['label2']) ? $settings['label2'] : 'Mehr erfahren'; ?>
 								<?php \Elementor\Icons_Manager::render_icon($settings['icon2'], ['aria-hidden' => 'true', 'class' => 'icon_svg']); ?>
 							</a>
@@ -234,6 +240,10 @@ class Eperi_Tertiary_Stage_Widget extends \Elementor\Widget_Base
 					</div>
 					<?php
 					if (!empty($settings['button_label'])) { ?>
+						<?php if (!empty($settings['button']['url'])) {
+							$this->add_link_attributes('button', $settings['button']);
+						}
+						?>
 						<div>
 							<a href="<?php echo $this->get_render_attribute_string('button'); ?>" class="button button_light_primary">
 								<?php echo ($settings['button_label'])  ?>

@@ -62,8 +62,8 @@ class Eperi_Nav_Card_Widget extends \Elementor\Widget_Base
                 'options' => ['url', 'is_external', 'nofollow'],
                 'default' => [
                     'url' => '',
-                    'is_external' => true,
-                    'nofollow' => true,
+                    'is_external' => false,
+                    'nofollow' => false,
                     // 'custom_attributes' => '',
                 ],
                 'label_block' => true,

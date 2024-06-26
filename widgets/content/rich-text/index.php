@@ -97,7 +97,7 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
         $icon_html = ob_get_clean();
 
         if (!empty($content)) {
-            $content = str_replace('<li>', '<li> ' . $icon_html . ' ', $content);
+            $content = str_replace('<li>', '<li><div class="listIcon">' . $icon_html . '</div>', $content);
         }
 ?>
 
@@ -116,8 +116,14 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
                 margin-bottom: 16px;
             }
 
+            .customBulletList li .listIcon {
+                width: 24px;
+                height: 24px;
+
+            }
+
             .customBulletList li svg {
-                width: 50px !important;
+                width: 24px !important;
                 fill: #00B4B4;
                 margin-top: 5px;
 

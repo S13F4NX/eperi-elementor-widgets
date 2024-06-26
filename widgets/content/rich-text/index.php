@@ -115,12 +115,12 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
                 /* Prevent the image from repeating */
                 position: absolute;
                 left: 0;
-                top: 20px;
+                top: 15px;
                 transform: translateY(-50%);
                 /* Center the icon vertically */
-                width: 32px;
+                width: 24px;
                 /* Define the width of the icon */
-                height: 32px;
+                height: 24px;
                 /* Define the height of the icon */
 
                 background-color: #00b4b4 !important;

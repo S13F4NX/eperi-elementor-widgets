@@ -70,7 +70,7 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
             'bulletIcon',
             [
                 'label' => esc_html__('Choose bullet icon', 'textdomain'),
-                'type' => \Elementor\Controls_Manager::MEDIA,
+                'type' => \Elementor\Controls_Manager::ICONS,
                 'default' => [
                     'url' => \Elementor\Utils::get_placeholder_image_src(),
                 ],

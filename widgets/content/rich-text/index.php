@@ -109,29 +109,50 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
                 padding-left: 0;
             }
 
-            .customBulletList li {
+            .customBulletList ol {
+                list-style-type: decimal;
+                padding-left: 30px;
+            }
+
+            .customBulletList ol li {
+                padding-left: 5px;
+                margin-bottom: 16px;
+
+            }
+
+            .customBulletList ul li {
                 display: flex;
                 align-items: start;
                 gap: 30px;
                 margin-bottom: 16px;
             }
 
-            .customBulletList li .listIcon {
+            .customBulletList ul li .listIcon {
                 width: 24px;
                 height: 24px;
 
             }
 
-            .customBulletList li svg {
+            .customBulletList ul li svg {
                 width: 24px !important;
                 fill: #00B4B4;
                 margin-top: 5px;
 
             }
 
+            .customBulletList ol li .listIcon {
+                display: none !important
+            }
+
             .customBulletList li a {
                 display: inline-flex !important;
-                color: red;
+                text-decoration: underline !important;
+                color: #00B4B4;
+            }
+
+            .richText a {
+                color: #00B4B4;
+                text-decoration: underline;
             }
 
             .richText p {

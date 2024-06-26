@@ -106,7 +106,7 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
 
 
 
-            .richText ul li::before {
+            .elementor-widget-container .richText ul li::before {
                 content: '';
                 /* Replace with the path to your icon */
                 background-size: contain;

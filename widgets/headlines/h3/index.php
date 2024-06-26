@@ -47,6 +47,7 @@ class Eperi_H3_Widget extends \Elementor\Widget_Base
             'headline',
             [
                 'label' => esc_html__('Headline', 'textdomain'),
+                'label_block'    => true,
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'default' => esc_html__('Add your headline here', 'textdomain'),
                 'placeholder' => esc_html__('Type your headline here', 'textdomain'),

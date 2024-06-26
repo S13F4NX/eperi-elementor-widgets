@@ -85,45 +85,37 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
     protected function render()
     {
         $settings = $this->get_settings_for_display();
+        $icon_url = esc_url($settings['bulletIcon']['url']);
+        $content = $settings['text'];
+
+        if (!empty($content)) {
+            // Replace default bullets with the uploaded icon
+            $content = str_replace('<li>', '<li><img src="' . $icon_url . '" alt="" class="custom-bullet-icon" /> ', $content);
+            echo '<div class="richText copy_medium text-color  custom-bullet-list">';
+            echo $content;
+            echo '</div>';
+        }
 ?>
 
 
 
         <style>
-            .listStyle ul {
-                list-style-type: none;
-                /* Remove default bullets */
-                padding-left: 0px;
-                /* Adjust as needed */
+            .custom-bullet-list ul {
+                list-style: none;
+                padding-left: 0;
             }
 
-            .listStyle li {
-                position: relative;
-                padding-left: 60px;
+            .custom-bullet-list li {
+                display: flex;
+                align-items: start;
+                gap: 30px;
                 margin-bottom: 16px;
-                /* Space for the custom icon */
             }
 
-
-
-            .listStyle ul li::before {
-                content: '';
-                /* Replace with the path to your icon */
-                background-size: contain;
-                /* Ensure the image fits within the defined size */
-                background-repeat: no-repeat;
-                background-image: url('<?php echo esc_url($settings['bulletIcon']['url']) ?>') !important;
-                ;
-                /* Prevent the image from repeating */
-                position: absolute;
-                left: 0;
-                top: 15px;
-                transform: translateY(-50%);
+            .custom-bullet-icon {
                 width: 24px;
+                /* Adjust icon size as needed */
                 height: 24px;
-
-
-
             }
 
 
@@ -137,7 +129,7 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
                 margin-bottom: 0 !important;
             }
         </style>
-        <div class="richText listStyle copy_medium text-color"><?php echo $settings['text']; ?></div>
+        <!-- <div class="richText listStyle copy_medium text-color"><?php echo $settings['text']; ?></div> -->
 <?php
     }
 }

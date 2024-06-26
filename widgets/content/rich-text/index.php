@@ -112,7 +112,7 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
                 background-size: contain;
                 /* Ensure the image fits within the defined size */
                 background-repeat: no-repeat;
-                background-image: url('<?php echo esc_url($settings['bulletIcon']['url']) ?>');
+                background-image: url('<?php echo esc_url($settings['bulletIcon']['url']) ?>') !important;
                 ;
                 /* Prevent the image from repeating */
                 position: absolute;

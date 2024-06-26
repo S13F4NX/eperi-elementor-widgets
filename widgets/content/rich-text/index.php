@@ -90,14 +90,14 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
 
 
         <style>
-            .richText ul {
+            .listStyle ul {
                 list-style-type: none;
                 /* Remove default bullets */
                 padding-left: 0px;
                 /* Adjust as needed */
             }
 
-            .richText li {
+            .listStyle li {
                 position: relative;
                 padding-left: 60px;
                 margin-bottom: 16px;
@@ -106,7 +106,7 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
 
 
 
-            .elementor-widget-container .richText ul li::before {
+            .listStyle ul li::before {
                 content: '';
                 /* Replace with the path to your icon */
                 background-size: contain;
@@ -137,7 +137,7 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
                 margin-bottom: 0 !important;
             }
         </style>
-        <div class="richText copy_medium text-color"><?php echo $settings['text']; ?></div>
+        <div class="richText listStyle copy_medium text-color"><?php echo $settings['text']; ?></div>
 <?php
     }
 }

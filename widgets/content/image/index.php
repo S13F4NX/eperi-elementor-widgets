@@ -54,6 +54,18 @@ class Eperi_Image_Widget extends \Elementor\Widget_Base
 			]
 		);
 
+		$this->add_control(
+			'toggle_border_radius_on_off',
+			[
+				'label' => esc_html__('Toggle Border Radius On-Off', 'textdomain'),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__('On', 'textdomain'),
+				'label_off' => esc_html__('Off', 'textdomain'),
+				'return_value' => 'true',
+				'default' => 'true',
+			]
+		);
+
 		$this->end_controls_section();
 	}
 
@@ -64,7 +76,9 @@ class Eperi_Image_Widget extends \Elementor\Widget_Base
 		// Get image url
 ?>
 		<!-- <div style="background-color:red; color:white; display:inline; padding:0px 5px">Image</div> -->
-		<img src="<?php echo esc_url($settings['image']['url']); ?>" alt="" class="default_image border_radius_24">
+		<img src="<?php echo esc_url($settings['image']['url']); ?>" alt="" class="default_image <?php if ('true' === $settings['toggle_border_radius_on_off']) {
+																										echo 'border_radius_24';
+																									} ?>">
 
 <?php
 	}

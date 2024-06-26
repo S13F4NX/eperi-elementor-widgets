@@ -117,12 +117,10 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
             }
 
             .customBulletList li svg {
-                width: 50px !important;
+                width: 24px !important;
                 fill: #00B4B4;
 
             }
-
-
 
             .richText p {
                 margin: 0;

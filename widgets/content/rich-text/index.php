@@ -123,8 +123,8 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
                 height: 24px;
                 /* Define the height of the icon */
 
-                background-color: #00b4b4 !important;
-                /* -webkit-mask-image: url('<?php echo esc_url($settings['bulletIcon']['url']) ?>'); */
+                /* background-color: #00b4b4 !important; */
+                -webkit-mask-image: url('<?php echo esc_url($settings['bulletIcon']['url']) ?>');
                 mask-image: url('<?php echo esc_url($settings['bulletIcon']['url']) ?>');
                 /* fill: #00b4b4;
                 color: #00b4b4; */

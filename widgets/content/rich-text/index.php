@@ -112,22 +112,16 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
                 background-size: contain;
                 /* Ensure the image fits within the defined size */
                 background-repeat: no-repeat;
+                background-image: url('<?php echo esc_url($settings['bulletIcon']['url']) ?>');
+                ;
                 /* Prevent the image from repeating */
                 position: absolute;
                 left: 0;
                 top: 15px;
                 transform: translateY(-50%);
-                /* Center the icon vertically */
                 width: 24px;
-                /* Define the width of the icon */
                 height: 24px;
-                /* Define the height of the icon */
 
-                /* background-color: #00b4b4 !important; */
-                -webkit-mask-image: url('<?php echo esc_url($settings['bulletIcon']['url']) ?>');
-                mask-image: url('<?php echo esc_url($settings['bulletIcon']['url']) ?>');
-                /* fill: #00b4b4;
-                color: #00b4b4; */
 
 
             }

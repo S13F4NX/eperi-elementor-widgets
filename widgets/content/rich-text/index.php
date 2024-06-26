@@ -104,11 +104,6 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
 
 
         <style>
-            .customBulletList ul {
-                list-style: none;
-                padding-left: 0;
-            }
-
             .customBulletList ol {
                 list-style-type: decimal;
                 padding-left: 30px;
@@ -118,6 +113,11 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
                 padding-left: 5px;
                 margin-bottom: 16px;
 
+            }
+
+            .customBulletList ul {
+                list-style: none;
+                padding-left: 0;
             }
 
             .customBulletList ul li {
@@ -136,7 +136,7 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
             .customBulletList ul li svg {
                 width: 24px !important;
                 fill: #00B4B4;
-                margin-top: 5px;
+                margin-top: 0px;
 
             }
 

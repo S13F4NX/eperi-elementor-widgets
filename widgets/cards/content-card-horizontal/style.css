@@ -3,8 +3,24 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.contentCardHorizontal.reverse .teaserImage {
+    order: 2;
+}
+
+.contentCardHorizontal.reverse .teaserImage img {
+    border-radius: 0 24px 24px 0;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contentCardHorizontal.reverse .teaserContent {
+    order: 1;
+}
+
 .contentCardHorizontal .teaserImage img {
     border-radius: 24px 0 0 24px;
+    height: 100%;
+    object-fit: cover;
 }
 
 .contentCardHorizontal .teaserContent {

@@ -102,6 +102,19 @@ class Eperi_Content_Card_Horizontal_Widget extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_control(
+            'toggle_left_right',
+            [
+                'label' => esc_html__('Toggle Left Right', 'textdomain'),
+                'type' => \Elementor\Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Left', 'textdomain'),
+                'label_off' => esc_html__('Right', 'textdomain'),
+                'return_value' => 'true',
+                'default' => '',
+            ]
+
+        );
+
         $this->end_controls_section();
     }
 
@@ -110,7 +123,10 @@ class Eperi_Content_Card_Horizontal_Widget extends \Elementor\Widget_Base
         $settings = $this->get_settings_for_display();
 ?>
 
-        <div class="contentCardHorizontal border_radius_24">
+
+        <div class="contentCardHorizontal border_radius_24 <?php if ('true' === $settings['toggle_left_right']) {
+                                                                echo 'reverse';
+                                                            } ?>">
             <div class="teaserImage"><img src="<?php echo esc_url($settings['image']['url']); ?>" alt=""></div>
             <div class="teaserContent">
                 <h3 class="title_size_4"><?php echo $settings['title']; ?></h3>

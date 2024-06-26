@@ -129,6 +129,11 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
 
             }
 
+            .customBulletList li a {
+                display: inline-flex !important;
+                color: red;
+            }
+
             .richText p {
                 margin: 0;
                 margin-bottom: 20px;

@@ -88,34 +88,38 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
         $icon_url = esc_url($settings['bulletIcon']['url']);
         $content = $settings['text'];
 
+        $icon = $settings['bulletIcon'];
+
+        // $icon_html = \Elementor\Icons_Manager::render_icon($icon, ['aria-hidden' => 'true', 'class' => 'custom-bullet-icon']);
+
+        ob_start();
+        \Elementor\Icons_Manager::render_icon($settings['bulletIcon'], ['aria-hidden' => 'true']);
+        $icon_html = ob_get_clean();
+
         if (!empty($content)) {
-            // Replace default bullets with the uploaded icon
-            $content = str_replace('<li>', '<li><img src="' . $icon_url . '" alt="" class="custom-bullet-icon" /> ', $content);
-            echo '<div class="richText copy_medium text-color  custom-bullet-list">';
-            echo $content;
-            echo '</div>';
+            $content = str_replace('<li>', '<li> ' . $icon_html . ' ', $content);
         }
 ?>
 
 
 
         <style>
-            .custom-bullet-list ul {
+            .customBulletList ul {
                 list-style: none;
                 padding-left: 0;
             }
 
-            .custom-bullet-list li {
+            .customBulletList li {
                 display: flex;
                 align-items: start;
                 gap: 30px;
                 margin-bottom: 16px;
             }
 
-            .custom-bullet-icon {
-                width: 24px;
-                /* Adjust icon size as needed */
-                height: 24px;
+            .customBulletList li svg {
+                width: 50px !important;
+                fill: #00B4B4;
+
             }
 
 
@@ -129,7 +133,7 @@ class Eperi_Rich_Text_Widget extends \Elementor\Widget_Base
                 margin-bottom: 0 !important;
             }
         </style>
-        <!-- <div class="richText listStyle copy_medium text-color"><?php echo $settings['text']; ?></div> -->
+        <div class="richText customBulletList copy_medium text-color"><?php echo $content; ?></div>
 <?php
     }
 }

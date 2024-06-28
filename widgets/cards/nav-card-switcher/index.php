@@ -134,7 +134,7 @@ class Eperi_Nav_Card_Switcher_Widget extends \Elementor\Widget_Base
 
 
             <div class="selector">
-                <div>
+                <div class="selector-wrapper">
                     <select name="links" id="links">
                         <?php
                         $settings = $this->get_settings_for_display();

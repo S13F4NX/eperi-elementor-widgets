@@ -15,6 +15,7 @@
     background-color: #f4f4f4;
     -webkit-appearance: none;
     appearance: none;
+    padding: 16px;
 }
 .navCardSwitcher .selector .selector-wrapper {
     position: relative;
@@ -22,8 +23,8 @@
 
 .navCardSwitcher .selector .selector-wrapper::after {
     content: '▼';
-    font-size: 1rem;
+    font-size: 0.75rem;
     top: 20px;
-    right: 10px;
+    right: 15px;
     position: absolute;
 }
